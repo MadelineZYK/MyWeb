@@ -120,7 +120,7 @@ em{font-style: normal;font-weight: normal;}
 .icoswmovie{background-position: -275px -50px;}
 .icoswqing{background-position: -275px -100px;}
 .icoswchang{background-position: -275px -225px;}
-.kindv2 i .txt2{float: left;margin: 0 8px 0 -1px;}
+.kindv2 .txt2{float: left;margin: 0 8px 0 -1px;}
 .kindv2 .more{float: left;margin: 1px 0 0;}
 .wautocut{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .warrow{display: inline-block;width: 7px;height: 4px;margin: 0 0 0 5px;overflow: hidden;vertical-align: middle;font-size: 12px;line-height: 12px;}
@@ -191,3 +191,109 @@ em{font-style: normal;font-weight: normal;}
 .wbfrom .wbtime{margin:0 7px 0 0;}
 .link2{color: #6cbae4}
 .wbfrom .hover{visibility: hidden;}
+.wbmediaexpand{border-width: 1px;border-style: solid;padding: 10px 20px 10px;margin: 5px 0 15px;border-radius: 3px;}
+.wbarrow{position: absolute;z-index: 0;margin: -18px 0 0;width: 22px;cursor: default;}
+.wbfeed .wbarrow *{font-family: "SimSun";overflow: hidden;font-size: 12px;line-height: 1.231;display: block;height: 12px;}
+.line1c{color: #d9d9d9;}
+.wbarrow span{margin: -11px 0 0;}
+.bg1c{color: #f2f2f2;}
+.wbname{font-size: 12px;line-height: 21px;}
+.func3{color: #333;text-decoration: none;}
+.wbmediaexpand .wbtext{font-size: 12px;line-height: 21px;padding: 4px 0 4px;}
+.wbtnc .wbtnicon{float: left;}
+.wbtnicon .wico12{width: 14px;,margin: 3px 0 0 0;}
+.wvline{margin: 0 4px 0 0;}
+.wbtnc .wautocut{display: inline-block;max-width: 110px;}
+.bg1{background-color: #f2f2f2;}
+.icoclub{width: 14px;height: 14px;margin-left: 2px;background-position: -125px -6px;vertical-align: text-bottom;background-image: url("../images/bgline.png");}
+.swfun{color: #333;}
+.wbfeed .wbboxsd{box-shadow: 1px 1px 1px 0 rgba(0,0,0,.07);margin-bottom: 10px;}
+.wbfeed .wbcardcon{border-width: 1px;border-style: solid;border-radius: 2px;margin-right: 1px;position: relative;}
+.bg5{background-color: #fff;}
+.wbcardshowhd{padding: 10px;height: 14px;}
+.wfl{float: left;display: inline;}
+.wfl4{font-size: 14px;}
+.wfb{font-weight: 700;}
+.wfr{float: right;display: inline;}
+.wbsldctrl{font-size: 0;}
+.wbsldctrl li{display: inline-block;vertical-align: middle;}
+.iconsldlftdis{margin: 0 6px 0 0;background-position: -75px -325px;cursor: default;}
+.wbsldctrl .wico12{margin: 0 3px;}
+.wbsldctrl{width: 8px;height: 8px;background-position: -100px -275px;}
+.wbcardsld{position: relative;zoom: 1;}
+.wbcardlistbox{overflow: hidden;margin: 0 10px;width: 472px;}
+.wbcards{width: 9999px;margin-left: -10px;}
+.wbcards li{float: left;padding: 0 0 10px;margin-left: -1px;}
+.wcitypeb{cursor: pointer;position: relative;width: 200px;padding: 0 10px;position: relative;border-left-width: 1px;border-left-style: solid;margin-left: -1px;}
+.wbfeed .wbcarditemmod .iconclose{position: absolute;right: 5px;top: 0;visibility: hidden;z-index: 9;visibility: visible;background-position: -75px -25px;}
+.wcithumb{float: left;position: absolute;top: 0;left: 10px;}
+.wcithumb img{width: 50px;height: 50px;border-radius: 2px;overflow: hidden;}
+.wcimain{margin-left: 60px;}
+.wcibd{margin-bottom: 10px;}
+.wcibd p{margin-bottom: 1px;}
+.wcibd .wfl4{display: inline-block;max-width: 110px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;vertical-align: text-bottom;}
+.addfans{margin-top: -6px;}
+.wbtnb{border-color: #d9d9d9;background-color: #f2f2f2;display: inline-block;border-width: 1px;border-style: solid;border-radius: 2px;overflow: hidden;vertical-align: middle;cursor: pointer;}
+.wbtnb span{padding: 0 5px 0 3px;}
+.addicon{margin-right: 2px;vertical-align: -2px;font: bold 16px Arial;height: 16px;text-decoration: none;color: #FFA00A;}
+.wcift{margin-left: -60px;line-height: 17px;}
+
+.wmainr{padding: 20px 0 0;position: relative;float: right;width: 230px;overflow: hidden;}
+.templeteenter a{background:url("../images/icon.png") no-repeat -477px 0px; display: block;width: 23px;height: 24px;position: absolute;right: 0px;top: 0px;}
+.wpersoninfo{margin: 0 20px;}
+.wpersoninfo dt{float: left;width: 80px;height: 81px;margin: 0 10px 0 0;padding: 0 0 2px 0;background: url("../images/leftnav.png") no-repeat -600px 81px;}
+.wpersoninfo dt a{display: block;}
+.wpersoninfo dt img{border-bottom-style: solid;border-bottom-width: 1px;width: 80px;height: 80px;}
+.line5{border-color: #fff;}
+.namebox{word-wrap: break-word;padding: 7px 0 0;}
+.namebox .name{width: 95px;line-height: 16px;}
+.namebox a{display: inline-block;overflow: hidden;font-size: 12px;font-weight: bold;word-wrap: break-word;}
+.iconbed{margin: 4px 0 0;}
+.wlevelico{display: inline-block;overflow: hidden;height: 9px;width: 28px;font-size: 0;padding: 5px 0 0 6px;background: url("../images/level.png") no-repeat;}
+.wlevelnum{background-position: 0 -120px;display: inline-block;height: 10px;font-size: 0;width: 26px;background: url("../images/level.png") no-repeat 0 -120px;}
+.useratten{margin: 20px 20px;}
+.useratten li{float: left;margin: 0 5px 0 0;padding: 0 5px 0 0;border-right-width: 1px;border-right-style: solid;}
+.useratten li a{display: block;}
+.useratten li strong{display: block;font-size: 20px;margin: 0 0 4px;font-weight: 400;line-height: 15px;font-family: tahoma;}
+.useratten .wnoborder{border:0;}
+.wbrightmodule{margin: 0 0 20px;}
+.wbrightmodule fieldset{padding: 3px 0 0 14px;margin-left: 1px;}
+.wbrightmodule .btns3{margin-top: -26px;float: right;padding-right: 20px;}
+.wbrightmodule .btns3 a{margin-left: 5px;vertical-align: middle;}
+.wbrightmodule .wbtnround span{line-height: 18px;}
+.rightcontent{line-height: 22px;padding: 15px 20px 0;clear: both;}
+.winmember .win5{margin-top: 3px;height: 62px;overflow: hidden;}
+.wtc{text-align: center;}
+.pro{width: 190px;height: 20px;background-image: url("../images/member.png");position: relative;margin-bottom: 13px;}
+.day{width: 190px;height: 20px; background-position: 0 -40px;background-image: url("../images/member.png");position: absolute;overflow: hidden;left: 0;}
+.day3{width: 66%;}
+.day i{position: absolute;top: 5px;right: -1px;width: 16px;height: 10px;display: block;background-image: url("../images/day.png");}
+
+.personlist{padding-left: 0;padding-right: 0;padding-top: 3px;}
+.rightcontent{line-height: 22px;padding: 15px 6px 0;clear: both;}
+.personlist dl{position: relative;margin-top: -3px;}
+.namelist{position: relative;padding: 6px 20px;line-height: 20px;}
+.personlist dt{margin: 3px 0 0;}
+.namelist .pic{float: left;width: 50px;height: 50px;overflow: hidden;padding-top: 2px;}
+.pic img{border-radius: 4px;width: 50px;height: 50px;}
+.con{margin-left: 60px;min-height: 60px;}
+dd {display: block;-webkit-margin-start: 40px;}
+.namelist .name{height: 20px;}
+.namelist .wbtnb{margin-top: 2px;}
+.namelist .change{position: absolute;right: 20px;top: 29px;margin: 0;visibility: hidden;}
+.rightexpand{clear: both;border-width: 1px;border-style: solid;border-radius: 2px;padding: 0 7px;margin: 8px 0 5px;}
+.rightexpand .arrow{margin: -7px 0 0 2px;width: 12px;line-height: 1.125;height: 7px;overflow: hidden;}
+.rightexpand .arrow span{margin: -9px 0 0;}
+.rightexpand .arrow *{width: 12px;font-family: "SimSun";overflow: hidden;font-size: 14px;display: inline-block;height: 10px;}
+.btmrt{padding: 10px 20px;text-align: right;margin-bottom: 20px;}
+.btmrt .left{float: left;}
+.btmrt .more{cursor: pointer;float: right;}
+.advercontb{position: relative;padding: 0 22px;}
+.mactivities .content{background: url("../images/leftnav.png") no-repeat -740px bottom;}
+.mactivities .content img{width: 186px;height: 250px;}
+.hottoppic{padding: 10px 20px 0 5px;}
+.hottopicad1{margin: 0 0 -10px;float: left;width: 205px;}
+.hottoppic li{position: relative;padding-left: 15px;}
+.hottoppic li p{word-wrap: break-word;}
+.total{float: right;}
+.bao{margin: 10px 5px 10px 5px;}
