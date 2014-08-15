@@ -3,6 +3,8 @@
 	<title>新浪微博</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="css/weibo.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/weibo.js"></script>
 </head>
 <body>
 	<div class="blog">
@@ -25,7 +27,7 @@
 										<a href="#" class="topname"><i>首页</i></a>
 									</div>
 									<div class="toptitle">
-										<a href="#" class="topname">
+										<a href="#" class="topname t1">
 											<i>热门
 												<span class="arrow">
 													<em>◆</em>
@@ -37,7 +39,7 @@
 										</div>
 									</div>
 									<div class="toptitle">
-										<a href="#" class="topname">
+										<a href="#" class="topname t1">
 											<i>应用
 												<span class="arrow">
 													<em>◆</em>
@@ -49,7 +51,7 @@
 										</div>
 									</div>
 									<div class="toptitle">
-										<a href="#" class="topname">
+										<a href="#" class="topname t1">
 											<i>游戏
 												<span class="arrow">
 													<em>◆</em>
@@ -1266,7 +1268,7 @@
 									<div class="wbrightmodule"></div>
 									<div class="ucard">
 										<div class="rightmoudlefixed">
-											<div class="wbrightmoudle">
+											<div class="wbrightmodule">
 												<form class="righttitle">
 													<fieldset class="line2">
 														<legend class="tit txt1">
@@ -1314,11 +1316,11 @@
 													
 													<dl class="namelist swfun clearfix">
 														<dt class="pic">
-															<a href="#"><img src="images/r1.jpg"></a>
+															<a href="#"><img src="images/r2.jpg"></a>
 														</dt>
 														<dd class="con">
 															<p class="name">
-																<a href="#">CelineDion...</a>
+																<a href="#">我早已迷失...</a>
 																<a href="#">
 																	<em class="wico16 approveco"></em>
 																</a>
@@ -1443,16 +1445,15 @@
 									<div class="wbrightmodule">
 										<div class="righttab line2">
 											<ul>
-												<li>
-													<a href="#" class="title func1">会员专区</a>
+												<li class="currentli">
+													<a href="#" class="title1 func1">会员专区</a>
 													<div class="wtabarrow bg4"></div>
 												</li>
 												<li>
 													<span class="line line2c">|</span>
 												</li>
 												<li>
-													<a href="#" class="title func1">会员动态</a>
-													<div class="wtabarrow bg4"></div>
+													<a href="#" class="title1 func1">会员动态</a>
 												</li>
 											</ul>
 
@@ -1468,7 +1469,7 @@
 										<div class="content personlist vipshowspecial">
 											<div class="interesttab">
 												<div class="rightcontent personlist">
-													<dl class="pic20 swfun clearfix">
+													<dl class="pic30 swfun clearfix">
 														<dt class="pic">
 															<a href="#"><img src="images/h1.jpg"></a>
 														</dt>
@@ -1495,7 +1496,7 @@
 														</dd>
 													</dl>
 
-													<dl class="pic20 swfun clearfix">
+													<dl class="pic30 swfun clearfix">
 														<dt class="pic">
 															<a href="#"><img src="images/h2.jpg"></a>
 														</dt>
@@ -1527,20 +1528,84 @@
 												</p>
 											</div>
 
-											<div class="memberdynamic"></div>
+											<div class="memberdynamic">
+												<p class="menbernote txt1">亲爱的
+													<a href="#">Wing_yk</a>：
+												</p>
+												<p class="menbernote txt1">快来申请微博信用卡！</p>
+												<div class="menbersms">
+													<a href="#"><img src="images/hy.jpg"></a>
+												</div>
+												<p class="menbernote">
+													<a href="#">
+														<span>立即体验</span>
+													</a>
+													<a href="#" class="wbtnb">
+														<span>开通会员</span>
+													</a>
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
 
 								<div id="plrightmodvservice"></div>
 
-								<div id="plrightmodnoticeboard"></div>
+								<div id="plrightmodnoticeboard">
+									<div class="wbrightmodule">
+										<form class="righttitle">
+											<fieldset class="line2">
+												<legend class="tit txt1">公告栏</legend>
+											</fieldset>
+										</form>
+										<div class="rightcontent feedback">
+											<div>申请加入微博社区委员会，可通过手机客户端便捷报名。
+												<a href="#">查看详情»</a>
+											</div>
+											<p class="dotpart">
+												<span class="info">
+														<a href="#">微博社区公约</a>
+												</span>
+											</p>
+											<p class="dotpart">
+												<span class="info">
+														<a href="#">微博举报处理中心</a>
+												</span>
+											</p>
+											<p class="dotpart">
+												<span class="info">
+														<a href="#">微博帮助</a>
+												</span>
+											</p>
+											<p class="dotpart">
+												<span class="info">
+														<a href="#">《首都互联网协会发布坚守七条底线倡议书》</a>
+												</span>
+											</p>
+										</div>
+									</div>
+								</div>
 
 								<div id="plcontentbubbox"></div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div class="tb">
+				<img src="images/tb.png">
+			</div>
+
+			<div class="globalfooter">
+				<img src="images/footerpic.png">
+			</div>
+
+			<div class="wgotop line3">
+				<span class="line5">
+					<em class="wico12 icongotop"></em>
+					<em class="txt2">返回顶部</em>
+				</span>
 			</div>
 		</div>
 	</div>
