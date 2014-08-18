@@ -21,7 +21,7 @@ body{color: #333; background-color: #bee1f5;background-image: url("../images/bod
 .logo{display: block;width: 100%;height: 100%;background: url("../images/bgline.png") no-repeat -548px -4px;overflow: hidden;}
 .link{position: relative;display: block;width: 100%;height: 100%;margin: -39px 0 0;background: url("../images/bgline.png") no-repeat -548px -45px;overflow: hidden;}
 
-.nav{display: inline;float: left;margin: 0 0 0 150px;}
+.nav{display: inline-block;float: left;margin: 0 0 0 150px;}
 .toptitle{position: relative; float: left;font-size: 14px;}
 .topname{position: relative;display: inline-block; padding: 0 2px 0 0;color: #fff;line-height: 16px;cursor: pointer;}
 .toptitle .topname i{display: inline-block;padding: 11px 19px 11px 20px;font-style: normal;font-weight: normal;}
@@ -35,18 +35,24 @@ body{color: #333; background-color: #bee1f5;background-image: url("../images/bod
 .searchbtn{display: inline-block;width: 20px;height: 20px;margin: 4px 0 0;background: url("../images/bgline.png") no-repeat;background-position: -450px -6px;vertical-align: top;}
 .searchcontent{display: none;background-color: #fff; min-width: 232px;padding:5px 0 0; border:1px solid #333; position: absolute; top:23px; left: 0;margin: 3px 0 0;border-radius: 2px;box-shadow: 0 2px 2px rgba(0, 0, 0, .2);font-size: 12px;}
 .searchcontent a{ width: 192px; *width: 232px; height: 14px; *height: 22px; display: block; padding: 4px 20px; color: rgb(51, 51, 51); line-height: 13.5px;}
-.stitle{height: 14px;padding: 4px 20px;overflow: hidden;cursor: pointer;white-space: nowrap;color: #0078b6;}
+.searchcontent .stitle{height: 14px;padding: 4px 20px;overflow: hidden;cursor: pointer;white-space: nowrap;color: #0078b6;}
+.searchcontent .currentsc{background-color: #e6e6e6;}
 
 .person{float: right; display: block;}
 .gnsetting{float: left; max-width: 95px;position: relative;}
-.gnsetting span{width: 16px; height: 16px; display: block; background-image: url("../images/bgline.png"); background-repeat: no-repeat;overflow: hidden;text-indent: -999px;}
+.gnsetting span{width: 16px; height: 16px;line-height: 37px; display: block; background-image: url("../images/bgline.png"); background-repeat: no-repeat;overflow: hidden;text-indent: -999px;}
 .ptitle{display: inline-block;max-width: 75px;height: 38px;padding: 0 10px;overflow: hidden;line-height: 37px;white-space: nowrap;text-overflow: ellipsis;color: #fff;}
-.ptitle1{color: #fff; display: block;position: relative;z-index: 9999;width: 30px;height: 27px;padding: 11px 0 0 12px;color: #fff;}
+.ptitle2,.ptitle1{color: #fff; display: block;position: relative;z-index: 9999;width: 30px;height: 27px;padding: 11px 0 0 12px;color: #fff;}
 .ptspan1{background-position: -225px -6px;}
 .ptspan2{background-position: -275px -6px;}
 .ptspan3{background-position: -350px -6px;}
 .ptspan4{background-position: -400px -6px;}
-.pscontent{display: none; position: absolute;right: 0px;top: 33px;width: 417px;padding: 0;color: #333;}
+.pscontent{display: none; z-index: 9998;padding: 5px 0 0;border: 1px solid #333;background: #fff;font-size: 12px;position:absolute; right: -1px;top: 35px;width: 150px;color: #333;border-top-left-radius: 2px;border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;box-shadow: 0 2px 2px rgba(0, 0, 0, .2);}
+.pscontent ul{border-bottom: 1px solid #e6e6e6;}
+.pscontent li{height: 26px;line-height: 26px;}
+.pscontent .sli{height: 32px;padding: 0 15px;background: #f2f2f2;line-height: 32px;}
+.pscontent li a{display: block;padding: 0 15px;white-space: nowrap;color: #333;}
+.pscontent li .special{color: #0a8cd2;}
 
 #wmain{background-image: url("../images/wmain.png");background-repeat: repeat-y;margin: 0 auto;width: 980px;display: block;}
 .wmainbg{background-image: none;padding: 0 0 20px;}
@@ -81,7 +87,7 @@ em{font-style: normal;font-weight: normal;}
 .morelist{display: none;}
 .icogroup{background-position: 0 -124px;}
 .levmore{display: block;font-size: 12px;padding: 0 0 0 20px;text-decoration: none;}
-.levmore .link1{height: 20px;line-height: 20px;}
+.levmore .link1{height: 20px;line-height: 20px;cursor: pointer;}
 
 .lev3 a{padding: 0;display: block;height: 21px;line-height: 23px;font-size: 12px;text-decoration: none;margin: 3px 8px 2px 0;}
 .func1{color: #333;text-decoration: none;}
