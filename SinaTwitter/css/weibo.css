@@ -131,6 +131,7 @@ em{font-style: normal;font-weight: normal;}
 .wautocut{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .warrow{display: inline-block;width: 7px;height: 4px;margin: 0 0 0 5px;overflow: hidden;vertical-align: middle;font-size: 12px;line-height: 12px;}
 .warrow .down{margin: -7px 0 0 -2px;}
+.wbhandle a{cursor: pointer;}
 
 .tipswrapper{width: 560px;height: 80px;overflow: hidden;margin-bottom: 15px;clear: both;margin-left: 20px;}
 .tipsplayer{position: relative;float: left;width: 560px;}
@@ -199,7 +200,7 @@ em{font-style: normal;font-weight: normal;}
 .wbfrom .hover{visibility: hidden;}
 .wbmediaexpand{border-width: 1px;border-style: solid;padding: 10px 20px 10px;margin: 5px 0 15px;border-radius: 3px;}
 .wbarrow{position: absolute;z-index: 0;margin: -18px 0 0;width: 22px;cursor: default;}
-.wbfeed .wbarrow *{font-family: "SimSun";overflow: hidden;font-size: 12px;line-height: 1.231;display: block;height: 12px;}
+.wbfeed .wbarrow em,.wbfeed .wbarrow span{font-family: "SimSun";overflow: hidden;font-size: 12px;line-height: 1.231;display: block;height: 12px;}
 .line1c{color: #d9d9d9;}
 .wbarrow span{margin: -11px 0 0;}
 .bg1c{color: #f2f2f2;}
@@ -239,7 +240,7 @@ em{font-style: normal;font-weight: normal;}
 .wcibd p{margin-bottom: 1px;}
 .wcibd .wfl4{display: inline-block;max-width: 110px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;vertical-align: text-bottom;}
 .addfans{margin-top: -6px;}
-.wbtnb{border-color: #d9d9d9;background-color: #f2f2f2;display: inline-block;border-width: 1px;border-style: solid;border-radius: 2px;overflow: hidden;vertical-align: middle;cursor: pointer;}
+.wbtnb{color: #000; border-color: #d9d9d9;background-color: #f2f2f2;display: inline-block;border-width: 1px;border-style: solid;border-radius: 2px;overflow: hidden;vertical-align: middle;cursor: pointer;}
 .wbtnb span{padding: 0 5px 0 3px;}
 .wbtnb .addicon{margin-right: 2px;vertical-align: -2px;}
 .addicon{font: bold 16px Arial;height: 16px;text-decoration: none;color: #FFA00A;}
@@ -286,7 +287,7 @@ em{font-style: normal;font-weight: normal;}
 dd {display: block;-webkit-margin-start: 40px;}
 .namelist .name{height: 20px;}
 .namelist .wbtnb{margin-top: 2px;}
-.namelist .change{position: absolute;right: 20px;top: 29px;margin: 0;visibility: hidden;}
+.namelist .change{position: absolute;right: 20px;top: 5px;margin: 0;display: none;}
 .rightexpand{clear: both;border-width: 1px;border-style: solid;border-radius: 2px;padding: 0 7px;margin: 8px 0 5px;}
 .rightexpand .arrow{margin: -7px 0 0 2px;width: 12px;line-height: 1.125;height: 7px;overflow: hidden;}
 .rightexpand .arrow span{margin: -9px 0 0;}
@@ -326,7 +327,7 @@ dd {display: block;-webkit-margin-start: 40px;}
 .pic30 .pic img{border-radius: 2px;width: 30px;height: 30px;}
 .pic30 .con{margin-left: 40px;min-height: 30px;line-height: 17px;}
 .icomember4{width: 16px;height: 14px;margin-left: 2px;background-position: -175px -25px;vertical-align: text-bottom;display: inline-block;background-image: url("../images/bgline.png");}
-.pic30 .change{position: absolute;right: 1px;top: 20px;margin: 0;visibility: hidden;}
+.pic30 .change{position: absolute;right: 1px;top: 8px;margin: 0;display: none;}
 .menbernote{padding: 10px 20px 0;}
 .menbernote a{cursor: pointer;}
 .memberdynamic{display: none;}
@@ -346,3 +347,13 @@ dd {display: block;-webkit-margin-start: 40px;}
 .tb img{width: 980px;height: 90px;}
 
 .globalfooter{margin: 20px auto;width: 980px;margin-bottom: 0;}
+
+.replyexpand{display: none; border-width: 1px;border-style: solid;padding: 10px 20px 10px;border-radius: 3px;line-height: 20px;margin: 10px 0 0;}
+.winput{width: 99%; overflow: hidden;margin: 0px 0px 5px;padding: 5px 0px 0px 2px;border-style: solid;border-width: 1px;font-size: 12px;font-family: Tahoma, 宋体;word-wrap: break-word;line-height: 18px;outline: none;height: 23px;}
+.icofaces{float: left;display: inline;margin: 4px 10px 0 0;background-position: -275px 0px;cursor: pointer;}
+.commonedlist{float: left;margin-top: 3px;}
+.wcheckbox{vertical-align: -2px;margin-right: 3px;outline-style: none;}
+.btn{text-align: right;padding: 0 0 0 0;}
+.wbtna{border-width: 1px;border-style: solid;border-color: #ff9b01;background-color: #ffa00a;color: #fff;border-radius: 2px;display: inline-block;overflow: hidden;cursor: pointer;}
+.wbtna span{border-color: #ffb33b;color: #fff;background-color: #ffa00a;}
+.replyexpand .wbarrow{margin-left: 445px;}
