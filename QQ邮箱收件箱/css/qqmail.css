@@ -2,9 +2,13 @@
 a{text-decoration: none;cursor: pointer;outline: none;color: #006699;}
 ul,li{text-decoration: none;}
 img{border:0;}
+body{background-color: #fff;}
 body,input,td,button,select{font-family: "lucida Grande",Verdana;font-size: 12px;}
 input{outline: none;}
 ul{display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;}
+table{display: table;border-collapse: separate;}
+tbody {display: table-row-group;vertical-align: middle;border-color: inherit;}
+tr {display: table-row;vertical-align: inherit;border-color: inherit;}
 
 #topdataid{height: 66px;overflow: hidden;}
 .topdata{height: 66px;}
@@ -58,11 +62,13 @@ ul{display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-m
 .fn{background: #006b8e;color: #ffffff;border: 1px solid #0099cc;}
 .fs,.fn{height: 22px;line-height: 20px;overflow: hidden; padding: 0 2px 0 13px;margin-bottom: 1px;margin-top: 0;margin: 0 5px 3px;}
 .fs a:link{color: #a3a3a3;}
+
+#folder6{margin-bottom: -1px;text-align: right;}
 .folderdiv .fs{border: 1px solid #001d26;}
 .icoinput{border: none;padding: 0;margin: 0;width: 16px;height: 16px;position: absolute;}
 .drifticon{background-color: transparent; background-position: -32px -190px;vertical-align: middle;margin: 4px 0 0 5px;background-image: url("../images/maild.png");background-repeat: no-repeat;width: 12px;height: 14px;}
 .iconfolderliststar{background-color: transparent;margin: 4px 0 0 5px;background-position: -80px -176px;background-image: url("../images/maild.png");background-repeat: no-repeat;width: 12px;height: 12px;}
-.fdleft{color: #929292;background: none;padding-left: 0;margin-right: 2px;display: inline;height: auto;}
+.newskinbody .fdleft{color: #929292;background: none;padding-left: 0;margin-right: 2px;display: inline;height: auto;}
 .sepline{border-top: 1px solid #31444a;height: 0!important;font: normal 1px "lucida Grande",Verdana;line-height: 0px;overflow: hidden;margin: 5px 5px 0;}
 #personalfolders,#tagfolders,#popfolders{display: none;overflow: hidden;}
 .fdon{background: url("../images/maild.png") no-repeat -127px -27px;width: 13px;height: 14px;border: 0;padding: 0;cursor: pointer;}
@@ -70,9 +76,69 @@ ul{display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-m
 .hidden{visibility: hidden;font-size: 0;}
 .seplineheight{height: 4px;overflow: hidden;}
 .newskinbody .fssep{white-space: nowrap;padding-left: 9px;}
-.fssep a{white-space: nowrap;padding: 1px 4px 3px;border: none!important;display: inline;height: auto;}
+.newskinbody .fssep a{white-space: nowrap;padding: 1px 4px 3px;border: none!important;display: inline;height: auto;}
 .newskinbody .fs .nolinkbg{cursor: default;text-decoration: none;float: none;padding: 0;margin: 0 3px;}
-.fdleft{display: inline;height: auto;color: #929292;}
+.newskinbody .fs .fdleft{display: inline;height: auto;color: #929292;}
 #navbottomtd{position: absolute;bottom: 0;height: 13px;overflow: hidden;background-repeat: no-repeat;}
 .navbottom{background: url("../images/topline.gif") -179px -11px no-repeat;width: 179px;height: 13px;}
 .fdul{padding:0;margin: 0;}
+.newskinbody .fs .emptylink{margin: -22px 2px 0 -32px;float: right;}
+.bold{font-weight: bold;}
+
+#mainframecontainer{position: absolute;top: 77px;left: 192px;bottom: 0;right: 0;overflow: hidden;z-index: 4;}
+#mainframe{position: absolute;width: 100%;height:870px;z-index: 5;overflow: hidden;}
+.tbody{min-width: 675px;padding: 2px 7px 6px 4px;overflow-x:auto; }
+.txttitle{color: #000000;font-weight: bold;font-size: 14px;margin: 4px 0 5px 8px;}
+.fsize{font-size: 12px;}
+.normal{font-weight: normal;}
+.black{color: #000;}
+#frm{margin: 0;padding: 0;display: block;}
+.toolbg{background-image: url("../images/tool.gif");background-repeat: repeat-x;background-color: #d5d5d5;height: 28px;}
+.toolbgline{border-bottom: 1px solid #bfbfbf;padding:7px;}
+.toolheight{zoom:1;}
+.nowrap{white-space: nowrap;}
+.toolheight .right{margin: 4px 0 0 0;}
+.btngray{border: 1px solid #888;color: #000000!important;background: -webkit-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);font-family: "lucida Grande",Verdana;display: inline-block;height: 22px;min-width: 24px;line-height: 22px;padding: 0 12px;margin: 0;text-align: center;text-decoration: none;vertical-align: middle;cursor: default;-webkit-user-select: none;border-radius: 3px;}
+.btnspace{margin-right: 3px;}
+.btndropdown{position: relative;padding: 0 22px 0 10px;}
+.btndropdown .icoselects{right: 8px;top: 10px;width: 7px;height: 4px;background-position: -32px -128px;}
+.icoselects{position: absolute;background-image: url("../images/maild.png");background-repeat: no-repeat;background-position: 0 -128px;overflow: hidden;display: block;}
+.o2{table-layout: fixed;width: 100%;border-top: 1px solid #fff;color: #3b3b3b;}
+.o2 td{border-bottom: 1px solid #c1c8d2;background-color: #f2f4f6;padding-top: 0;}
+input[type="checkbox"] {margin: 3px 3px 3px 4px;-webkit-appearance: checkbox;box-sizing: border-box;padding: initial;background-color: initial;border: initial;}
+.otitle2{background-image: url("../images/maild.png");background-position: -128px 0;background-repeat: repeat-y;}
+.icomailtitle{background-color: transparent; border: none;padding: 0;margin: 0;background-image: url("../images/maild.png");background-position: 1px -82px;background-repeat: no-repeat;width: 26px;height: 16px;}
+.otitle2 a{color: #000;text-decoration: none;}
+#selectall{visibility: hidden;height: 0px;}
+.graytipcon{height: 25px;overflow: hidden;transition: height 0.3s linear;-webkit-transition: height 0.3s linear;}
+.graytip{background: #ffffe9;border-bottom: 1px solid #e3e6eb;line-height: 24px;text-align: center;}
+.selectmail{display: none;}
+
+.talk{position: relative;display: block;font-size: 12px;font-weight: normal;text-decoration: none;clear: both;border-left: none;border-right: none;padding: 8px 0px 3px 9px;border-bottom-width: 2px;border-top: none;}
+.bd{border-bottom: 2px solid #bfbfbf;}
+.talk .one{position: absolute;margin: 0 0 0 -33px;left: 0;}
+.talk .curdefault{text-decoration: none;cursor: default;}
+.talk label{cursor: pointer;}
+.talk b {font-size: 14px;}
+.underline{text-decoration: underline!important;}
+.i{table-layout: fixed;width: 100%;}
+.m{height: 24px;border-bottom: 1px solid #e3e6eb;font-weight: normal;clear: both;}
+.toarea .m{border-bottom-width: 1px;}
+.i .cx{vertical-align: top;padding: 3px 0 1px 5px;width: 24px;}
+.i .ci{vertical-align: top;width: 50px;padding: 4px 0 0 0;}
+.i .ci div{float: left;}
+.i .cir{width: 18px;height: 16px;overflow: hidden;cursor: pointer;}
+.i .rr{background-image: url("../images/maild.png");background-position: -48px -16px;background-repeat: no-repeat;}
+.i .l{padding-top: 2px;cursor: pointer;}
+.i .t1{width: 117px;padding-right: 12px;}
+.i .tf{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.t1 b{white-space: nowrap;}
+.i .fgn{width: 16px;}
+.i .gt{color: #a0a0a0;}
+.i .no{font-weight: normal;}
+.i .u{text-decoration: none;}
+u{outline: medium none;text-decoration: none;}
+.i .dt{width: 100px;white-space: nowrap;}
+.i .dt div{margin: 0 0 0 12px;}
+.i .fg{width: 20px;}
+.i .fg div{width: 14px;height: 14px;background-image: url("../images/maild.png");background-repeat: no-repeat;background-position: -32px -160px;}
