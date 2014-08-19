@@ -1,0 +1,78 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;cursor: pointer;outline: none;color: #006699;}
+ul,li{text-decoration: none;}
+img{border:0;}
+body,input,td,button,select{font-family: "lucida Grande",Verdana;font-size: 12px;}
+input{outline: none;}
+ul{display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;}
+
+#topdataid{height: 66px;overflow: hidden;}
+.topdata{height: 66px;}
+.topbg{height: 66px;float: right;background: url("../images/topbg.jpg") no-repeat right;width: 486px;}
+.addrtitle{color: #8fa7b3;}
+.setinfo{height: 23px;margin: 6px 8px 0 0;text-align: right;}
+.right{float: right;}
+#gplayercontainer{padding-right: 10px;margin: 0;}
+.searchsubject{position: absolute;z-index: 11;right: 0;width: 286px;top: 37px;}
+.nowrap{white-space: nowrap;}
+.smartsearch{position: relative;border: 1px solid #BBB;background: #FFF;padding: 1px 21px;height: 18px;line-height: 18px;margin: 3px 5px 3px 2px;border-radius: 2px;box-shadow: 0 1px 1px #E6E6E6 inset;}
+.searchinput{background: #fff;width: 100%;height: 18px;line-height: 18px;font-size: 12px;padding: 0;margin: 0;border: 0;outline: none;}
+.ssicon{width: 18px;height: 16px;display: inline-block;vertical-align: middle;background-image: url("../images/smart.png");background-repeat: no-repeat;}
+.ssfronticon{left: 2px;top: 2px;position: absolute;}
+.ssiconsearch{background-position: -3px -3px;}
+.ssendicon{right: 2px;top: 3px;position: absolute;}
+.ssiconarrowdown{background-position: -27px -4px;}
+.logo{position: absolute;left: 5px;z-index: 6;}
+.imglogo{width: 215px;height: 60px;display: block;float: left;}
+.pointer{cursor: pointer;}
+.skinlogo img{background-image: url("../images/logo6.gif");}
+.maillogo{width: 215px;height: 60px;border: none;}
+.switch{display: block;float: left;margin: 12px 0 0 0;line-height: 18px;}
+.left{float: left;}
+.sl{margin-top: 1px;}
+
+#seplineid{position: absolute;top: 66px;left: 0;right: 0;height: 11px;}
+.topline{width: auto;border-left: 8px solid #fff;height: 11px;border-right: 0;background: url("../images/navbg.gif") 0 -107px repeat-x;}
+.toplineimg{background-image: url("../images/topline.gif");background-position: -179px 0;width: 184px;height: 22px;}
+.fdbody{border-left: 8px solid #fff;border-right: 1px solid #000000;background: #000000;}
+.bodybgbt{position: absolute;top: 77px;width: 179px;bottom: 0;}
+#leftpanel{position: absolute;top: 77px;width: 179px;left: 8px;bottom: 0;border-left: 0 none;height: auto;}
+#navbardiv{position: absolute;top:0;left:0;z-index: 3;}
+.newskinbody .navbar{background-image: url("../images/navbg.gif");background-repeat: no-repeat;width: 179px;height: 107px;margin: 0; list-style: none;}
+.newskinbody .navbar .fs{height: 24px!important;color: #afe6ee;float: left;}
+.newskinbody .navbar .composepart{margin: 0 10px 0 11px;padding: 2px 0 0 0;height: 26px;}
+.newskinbody .navbar .fs a{color: #afe6ee;line-height: 24px;padding-left: 41px;height: 24px!important;}
+.newskinbody .fs,.newskinbody .fn{padding-left: 0;padding-right: 0;}
+.newskinbody .fs a,.newskinbody .fn a{display: block;height: 22px;overflow: hidden;padding-left: 13px;text-decoration: none;color: #fff;}
+.navbar a{text-decoration: none;font-weight: bold;font-size: 14px;font-family: "lucida Grande",Verdana;}
+.navbar .fs input{float: left;border: 0;padding: 0;width: 20px;height: 20px;margin: -20px 0 0 12px;}
+.composebtn{background-image: url("../images/maild.png");background-position: 0 -1px;background-repeat: no-repeat;background-color: transparent;}
+.navbar .checkpart{margin: 6px 10px 0 11px;}
+.checkbtn{background: url("../images/maild.png") 0 -33px no-repeat;background-color: transparent;}
+.navbar .addrpart{margin: 6px 10px 0 12px;}
+.addrbtn{background: url("../images/maild.png") 0 -63px no-repeat; background-color: transparent;}
+.listbg{background-image: url("../images/topline.gif"); background-repeat: repeat-y;}
+.listflow{position: absolute;top: 107px;left: 0;right: 0;bottom: 13px;overflow: hidden;height: auto;}
+#folder{overflow-y: auto;overflow-x: hidden;}
+.folderdiv{margin: 0 5px 0 6px;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 100%;overflow: auto;}
+.fn{background: #006b8e;color: #ffffff;border: 1px solid #0099cc;}
+.fs,.fn{height: 22px;line-height: 20px;overflow: hidden; padding: 0 2px 0 13px;margin-bottom: 1px;margin-top: 0;margin: 0 5px 3px;}
+.fs a:link{color: #a3a3a3;}
+.folderdiv .fs{border: 1px solid #001d26;}
+.icoinput{border: none;padding: 0;margin: 0;width: 16px;height: 16px;position: absolute;}
+.drifticon{background-color: transparent; background-position: -32px -190px;vertical-align: middle;margin: 4px 0 0 5px;background-image: url("../images/maild.png");background-repeat: no-repeat;width: 12px;height: 14px;}
+.iconfolderliststar{background-color: transparent;margin: 4px 0 0 5px;background-position: -80px -176px;background-image: url("../images/maild.png");background-repeat: no-repeat;width: 12px;height: 12px;}
+.fdleft{color: #929292;background: none;padding-left: 0;margin-right: 2px;display: inline;height: auto;}
+.sepline{border-top: 1px solid #31444a;height: 0!important;font: normal 1px "lucida Grande",Verdana;line-height: 0px;overflow: hidden;margin: 5px 5px 0;}
+#personalfolders,#tagfolders,#popfolders{display: none;overflow: hidden;}
+.fdon{background: url("../images/maild.png") no-repeat -127px -27px;width: 13px;height: 14px;border: 0;padding: 0;cursor: pointer;}
+.newskinbody .fdon,.fdoff{float: left;margin: -21px 0 0 1px;}
+.hidden{visibility: hidden;font-size: 0;}
+.seplineheight{height: 4px;overflow: hidden;}
+.newskinbody .fssep{white-space: nowrap;padding-left: 9px;}
+.fssep a{white-space: nowrap;padding: 1px 4px 3px;border: none!important;display: inline;height: auto;}
+.newskinbody .fs .nolinkbg{cursor: default;text-decoration: none;float: none;padding: 0;margin: 0 3px;}
+.fdleft{display: inline;height: auto;color: #929292;}
+#navbottomtd{position: absolute;bottom: 0;height: 13px;overflow: hidden;background-repeat: no-repeat;}
+.navbottom{background: url("../images/topline.gif") -179px -11px no-repeat;width: 179px;height: 13px;}
+.fdul{padding:0;margin: 0;}

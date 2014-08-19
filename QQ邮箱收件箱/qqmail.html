@@ -1,0 +1,195 @@
+<html>
+<head>
+	<title>QQ邮箱收件列表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/qqmail.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/qqmail.js"></script>
+</head>
+<body>
+	<div class="getuserdata" id="topdataid">
+		<div class="topdata">
+			<div class="topbg">
+				<div class="setinfo addrtitle" id="setinfo">
+					<div class="right">
+						<span id="sendtomobile"></span>
+						<span id="imepanel"></span>
+						<a href="#" class="toptitle">反馈建议</a>
+						<span class="addrtitle">|</span>
+						<a href="#" class="toptitle">帮助中心</a>
+						<span class="addrtitle">|</span>
+						<a href="#" class="toptitle">退出</a>
+					</div>
+					<div id="minimizecontainer" class="right"></div>
+					<div id="gplayercontainer" class="right"></div>
+				</div>
+				<div class="searchsubject nowrap">
+					<div class="smartsearch">
+						<input type="text" class="searchinput" id="subject" value="邮件搜索...">
+						<span class="ssicon ssfronticon ssiconsearch" id="searchicon"></span>
+						<span class="ssicon ssendicon ssiconarrowdown" id="subjectsearchlogo"></span>
+					</div>
+				</div>
+			</div>
+			<div class="logo">
+				<a href="#" class="imglogo pointer skinlogo">
+					<img class="maillogo" src="images/spacer.gif">
+				</a>
+				<div class="switch">
+					<div class="left sl">
+						<b id="useralias">翎</b>
+						<span id="useraddrcontainer" class="pointer">
+							<
+							<span id="useraddr">529351033@qq.com</span>
+							>
+							<small class="arrowfontsize" id="useraddrarrow">▼</small>
+						</span>
+						<br>
+						<span class="addrtitle">
+							<a href="#">邮箱首页</a>
+							&nbsp;|&nbsp;
+							<a id="framehtmlsetting">设置</a>
+							&nbsp;&nbsp;
+							<a href="#" id="changeskin">换肤</a>
+						</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="toplineheight" id="seplineid">
+		<div class="topline">
+			<div class="toplineimg left" id="imgline"></div>
+		</div>
+	</div>
+
+	<div class="fdbody bodybgbt"></div>
+	<div class="newskinbody" id="leftpanel">
+		<div id="navbardiv">
+			<ul class="navbar fdul" id="navbartd">
+				<li class="composepart fs" id="composebtntd">
+					<a id="composebtn">写信</a>
+					<input type="button" class="composebtn" disabled>
+				</li>
+				<li class="checkpart fs">
+					<a id="readmailbtnlink">收信</a>
+					<input type="button" class="checkbtn" disabled>
+				</li>
+				<li class="addrpart fs">
+					<a>通讯录</a>
+					<input type="button" class="addrbtn" disabled>
+				</li>
+			</ul>
+		</div>
+		<div id="navmidbar" class="listbg listflow">
+			<div id="folder" class="folderdiv">
+				<a id="detechfl"></a>
+				<div>
+					<div>
+						<div id="outfolder">
+							<div id="sysfolderlist">
+								<ul class="fdul">
+									<li class="fn">
+										<a href="#" class="fsize">收件箱</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize staradjust">星标邮件
+											<input class="icoinput iconfolderliststar" type="button">
+										</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize">群邮件</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize">草稿箱</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize">已发送</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize">已删除</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize f1">垃圾箱</a>
+										<a href="#" class="nolinkbg normal fdleft emptylink f2">[清空]</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize">QQ邮件订阅</a>
+									</li>
+								</ul>
+								<div class="sepline"></div>
+							</div>
+							<div id="scrollfolder">
+								<div style="height:3px;overflow:hidden"></div>
+								<div id="showtopdiv">
+									<ul id="mytopfolders"></ul>
+									<ul id="poptopfolders"></ul>
+									<ul id="tagtopfolders"></ul>
+								</div>
+								<div id="personalfoldersdiv">
+									<ul class="fdul" id="personalfolders"></ul>
+								</div>
+								<div id="popfoldersdiv">
+									<ul class="fdul">
+										<li class="fs" id="folderpoptd">
+											<a href="#" id="folderpop">其他邮箱</a>
+											<img src="images/spacer.gif" id="iconpop" class="fdon hidden">
+										</li>
+									</ul>
+									<ul class="fdul" id="popfolders"></ul>
+								</div>
+								<div id="tagfoldersdiv">
+									<ul class="fdul" id="tagfolders"></ul>
+								</div>
+								<div class="sepline"></div>
+								<div class="seplineheight"></div>
+								<ul class="fdul" id="mynote">
+									<li class="fs">
+										<a href="#" class="normal drifticonadjust">漂流瓶
+											<input class="icoinput drifticon" type="button">
+										</a>
+									</li>
+									<li class="fs fssep">
+										<span>
+											<a href="#" id="foldercard">贺卡</a>
+										</span>
+										<a class="nolinkbg fdleft">|</a>
+										<span>
+											<a href="#">明信片</a>
+										</span>
+									</li>
+									<li class="fs fssep">
+										<span>
+											<a href="#" id="foldercard">日历</a>
+										</span>
+										<a class="nolinkbg fdleft">|</a>
+										<span>
+											<a href="#">记事本</a>
+										</span>
+									</li>
+									<li class="fs">
+										<a href="#" class="fsize staradjust">附件收藏</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="fdlistwidth normal fsize">文件中转站
+											<span class="ftnuploading"></span>
+										</a>
+									</li>
+									<li class="fs">
+										<a href="#" class="bold">阅读空间
+											<span id="countrss">(53)</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="navbottomtd" class="navbottom"></div>
+	</div>
+</body>
+</html>
