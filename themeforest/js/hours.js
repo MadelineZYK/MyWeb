@@ -42,6 +42,8 @@ $(function(){
 		$(this).parent().parent().parent().parent().prev().find("#page").show();
 		$(this).parent().parent().parent().parent().parent().parent().css("height","800px");
 	});
+
+	setInterval("timer()",1000);  //倒计时
 });
 
 
@@ -54,3 +56,27 @@ function showbg(){
 		currindex=1;
 	}
 }
+
+function timer(){
+    var ts = (new Date(2014, 9-1, 7, 0, 0, 0)) - (new Date());//计算剩余的毫秒数  
+    var dd = parseInt(ts / 1000 / 60 / 60 / 24, 10);//计算剩余的天数  
+    var hh = parseInt(ts / 1000 / 60 / 60 % 24, 10);//计算剩余的小时数  
+    var mm = parseInt(ts / 1000 / 60 % 60, 10);//计算剩余的分钟数  
+    var ss = parseInt(ts / 1000 % 60, 10);//计算剩余的秒数  
+    dd = checkTime(dd);  
+    hh = checkTime(hh);  
+    mm = checkTime(mm);  
+    ss = checkTime(ss);
+    document.getElementById("days").innerHTML = dd;
+    document.getElementById("hours").innerHTML = hh;
+    document.getElementById("minutes").innerHTML = mm;
+    document.getElementById("seconds").innerHTML = ss;      
+}  
+
+function checkTime(i)    
+{    
+   if (i < 10) {    
+       i = "0" + i;    
+    }    
+   return i;    
+}    

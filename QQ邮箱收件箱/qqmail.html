@@ -48,7 +48,7 @@
 						<span class="addrtitle">
 							<a href="#">邮箱首页</a>
 							&nbsp;|&nbsp;
-							<a id="framehtmlsetting">设置</a>
+							<a href="#" id="framehtmlsetting">设置</a>
 							&nbsp;&nbsp;
 							<a href="#" id="changeskin">换肤</a>
 						</span>
@@ -92,7 +92,10 @@
 							<div id="sysfolderlist">
 								<ul class="fdul">
 									<li class="fn">
-										<a href="#" class="fsize">收件箱</a>
+										<a href="#" class="fsize">
+											<b>收件箱</b>
+											<b>(1)</b>
+										</a>
 									</li>
 									<li class="fs">
 										<a href="#" class="fsize staradjust">星标邮件
@@ -192,7 +195,7 @@
 		<div id="navbottomtd" class="navbottom"></div>
 	</div>
 
-	<div id="mainframecontainer" scrolling="auto">
+	<div id="mainframecontainer">
 		<div id="mainframe">
 			<div class="tbody" id="list">
 				<div class="mailcontainer" id="qqmailcontainer">
@@ -219,13 +222,13 @@
 								<a class="btngray btnspace" id="btnreportspam">举报</a>
 								<a class="btngray btnspace" id="setallreaded">全部标为已读</a>
 								<span id="markcontainer" class="btnspace">
-									<a href="#" class="btngray btndropdown">
+									<a class="btngray btndropdown">
 										<span class="btnselexttxt">标记为...</span>
 										<span class="icoselects"></span>
 									</a>
 								</span>
 								<span id="selmcontainer">
-									<a href="#" class="btngray btndropdown">
+									<a class="btngray btndropdown">
 										<span class="btnselecttxt">移动到...</span>
 										<span class="icoselects"></span>
 									</a>
@@ -237,7 +240,7 @@
 							<tbody>
 								<tr>
 									<td style="padding:1px 0 1px 5px;" width="27">
-										<input type="checkbox" id="ckbselectall">
+										<input type="checkbox" id="ckbselectall" choice="no">
 									</td>
 									<td style="width:31px;padding:0 0 0 6px;">
 										<input type="button" class="icomailtitle" disabled>
@@ -273,6 +276,57 @@
 							<a class="curdefault">
 								<label>
 									<b>今天</b> (
+									<span class="newfd underline">1 封</span>)
+								</label>
+							</a>
+						</div>
+
+						<div class="toarea">
+							<table class="i m">
+								<tbody>
+									<tr>
+										<td class="cx">
+											<input type="checkbox">
+										</td>
+										<td class="ci">
+											<div class="cir ru"></div>
+										</td>
+										<td class="l">
+											<table class="i bold">
+												<tbody>
+													<tr>
+														<td class="t1 tf">
+															<b class="bold">翎</b>
+														</td>
+														<td class="fgn">
+															<div></div>
+														</td>
+														<td class="gt">
+															<div class="tf">
+																<u class="black tt">asd</u>
+															</div>
+														</td>
+														<td class="dt">
+															<div>3分钟前</div>
+														</td>
+														<td class="fg">
+															<div></div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+
+						<div class="bd talk">
+							<input type="checkbox" class="one">
+							<a class="curdefault">
+								<label>
+									<b>昨天</b> (
 									<span class="newfd underline">2 封</span>)
 								</label>
 							</a>
@@ -702,7 +756,7 @@
 							<a class="curdefault">
 								<label>
 									<b>更早</b> (
-									<span class="newfd underline">15 封</span>)
+									<span class="newfd underline">14 封</span>)
 								</label>
 							</a>
 						</div>
@@ -774,46 +828,6 @@
 															</div>
 														</td>
 														<td class="dt">
-															<div>8月14日</div>
-														</td>
-														<td class="fg">
-															<div></div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<table class="i m">
-								<tbody>
-									<tr>
-										<td class="cx">
-											<input type="checkbox">
-										</td>
-										<td class="ci">
-											<div class="cir rr"></div>
-										</td>
-										<td class="l">
-											<table class="i">
-												<tbody>
-													<tr>
-														<td class="t1 tf">
-															<b>美团网 </b>
-														</td>
-														<td class="fgn">
-															<div></div>
-														</td>
-														<td class="gt">
-															<div class="tf no">
-																<u class="black tt">美团：您尾号1547的和米堂芥末章鱼烧美团券已被使用，欢迎您对本次消费进行评价
-																</u>
-																<b class="no"> - 请问您需不需要此类 消费确认邮件？  Wing殿 您好：  您尾号1547的"和米堂章鱼烧芥末章鱼烧1份，八佰伴"美</b>
-															</div>
-														</td>
-														<td class="dt">
 															<div>8月13日</div>
 														</td>
 														<td class="fg">
@@ -1690,7 +1704,46 @@
 							</table>
 						</div>
 
-						
+						<div class="listbtline">
+							<div class="fsize selbarbt barspace2">
+								<span class="addrtitle">选择：</span>
+								&nbsp;
+								<a href="#">全部</a>
+								&nbsp;&nbsp;
+								<a href="#">无</a>
+								&nbsp;&nbsp;
+								<a href="#">已读</a>
+								&nbsp;&nbsp;
+								<a href="#">未读</a>
+							</div>
+						</div>
+
+						<div class="toolbg toolbgline toolheight nowrap">
+							<div class="right">
+								1/8 页&nbsp;
+								<a href="#" id="nextpage">下一页</a>&nbsp;
+								<a href="#" id="maillistjump">跳转</a> 
+							</div>
+							<div class="nowrap left">
+								<a class="btngray btnspace" id="quickdel">删除</a>
+								<a class="btngray btnspace" id="quickcompletelydel">彻底删除</a>
+								<a class="btngray btnspace">转发</a>
+								<a class="btngray btnspace" id="btnreportspam">举报</a>
+								<a class="btngray btnspace" id="setallreaded">全部标为已读</a>
+								<span id="markcontainer" class="btnspace">
+									<a class="btngray btndropdown">
+										<span class="btnselexttxt">标记为...</span>
+										<span class="icoselects"></span>
+									</a>
+								</span>
+								<span id="selmcontainer">
+									<a class="btngray btndropdown">
+										<span class="btnselecttxt">移动到...</span>
+										<span class="icoselects"></span>
+									</a>
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

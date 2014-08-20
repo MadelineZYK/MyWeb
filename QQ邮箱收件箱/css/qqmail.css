@@ -1,14 +1,17 @@
 *{margin: 0;padding: 0;}
 a{text-decoration: none;cursor: pointer;outline: none;color: #006699;}
+a:link:hover{text-decoration: underline;}
 ul,li{text-decoration: none;}
 img{border:0;}
 body{background-color: #fff;}
 body,input,td,button,select{font-family: "lucida Grande",Verdana;font-size: 12px;}
-input{outline: none;}
+input{outline: none;color: #a3a3a3;}
 ul{display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 40px;}
 table{display: table;border-collapse: separate;}
 tbody {display: table-row-group;vertical-align: middle;border-color: inherit;}
-tr {display: table-row;vertical-align: inherit;border-color: inherit;}
+tr{display: table-row;vertical-align: inherit;border-color: inherit;}
+.toarea b{font-weight: normal;}
+.toarea .bold{font-weight: bold;}
 
 #topdataid{height: 66px;overflow: hidden;}
 .topdata{height: 66px;}
@@ -54,6 +57,7 @@ tr {display: table-row;vertical-align: inherit;border-color: inherit;}
 .navbar .checkpart{margin: 6px 10px 0 11px;}
 .checkbtn{background: url("../images/maild.png") 0 -33px no-repeat;background-color: transparent;}
 .navbar .addrpart{margin: 6px 10px 0 12px;}
+.navbar li{width: 156px;}
 .addrbtn{background: url("../images/maild.png") 0 -63px no-repeat; background-color: transparent;}
 .listbg{background-image: url("../images/topline.gif"); background-repeat: repeat-y;}
 .listflow{position: absolute;top: 107px;left: 0;right: 0;bottom: 13px;overflow: hidden;height: auto;}
@@ -61,7 +65,7 @@ tr {display: table-row;vertical-align: inherit;border-color: inherit;}
 .folderdiv{margin: 0 5px 0 6px;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 100%;overflow: auto;}
 .fn{background: #006b8e;color: #ffffff;border: 1px solid #0099cc;}
 .fs,.fn{height: 22px;line-height: 20px;overflow: hidden; padding: 0 2px 0 13px;margin-bottom: 1px;margin-top: 0;margin: 0 5px 3px;}
-.fs a:link{color: #a3a3a3;}
+.fdul .fs a:link{color: #a3a3a3;}
 
 #folder6{margin-bottom: -1px;text-align: right;}
 .folderdiv .fs{border: 1px solid #001d26;}
@@ -85,9 +89,9 @@ tr {display: table-row;vertical-align: inherit;border-color: inherit;}
 .newskinbody .fs .emptylink{margin: -22px 2px 0 -32px;float: right;}
 .bold{font-weight: bold;}
 
-#mainframecontainer{position: absolute;top: 77px;left: 192px;bottom: 0;right: 0;overflow: hidden;z-index: 4;}
-#mainframe{position: absolute;width: 100%;height:870px;z-index: 5;overflow: hidden;}
-.tbody{min-width: 675px;padding: 2px 7px 6px 4px;overflow-x:auto; }
+#mainframecontainer{position: absolute;top: 77px;left: 192px;bottom: 0;right: 0;z-index: 4;overflow: hidden;}
+#mainframe{position: absolute;width: 100%;height: 100%;z-index: 5; overflow: auto;}
+.tbody{min-width: 675px;padding: 2px 7px 6px 4px;overflow-x:auto; overflow: hidden;}
 .txttitle{color: #000000;font-weight: bold;font-size: 14px;margin: 4px 0 5px 8px;}
 .fsize{font-size: 12px;}
 .normal{font-weight: normal;}
@@ -125,10 +129,11 @@ input[type="checkbox"] {margin: 3px 3px 3px 4px;-webkit-appearance: checkbox;box
 .m{height: 24px;border-bottom: 1px solid #e3e6eb;font-weight: normal;clear: both;}
 .toarea .m{border-bottom-width: 1px;}
 .i .cx{vertical-align: top;padding: 3px 0 1px 5px;width: 24px;}
-.i .ci{vertical-align: top;width: 50px;padding: 4px 0 0 0;}
+.i .ci{vertical-align: top;width: 50px;padding: 4px 0 0 10px;}
 .i .ci div{float: left;}
 .i .cir{width: 18px;height: 16px;overflow: hidden;cursor: pointer;}
 .i .rr{background-image: url("../images/maild.png");background-position: -48px -16px;background-repeat: no-repeat;}
+.i .ru{background-image: url("../images/maild.png");background-position: -48px 0;background-repeat: no-repeat;}
 .i .l{padding-top: 2px;cursor: pointer;}
 .i .t1{width: 117px;padding-right: 12px;}
 .i .tf{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
@@ -142,3 +147,8 @@ u{outline: medium none;text-decoration: none;}
 .i .dt div{margin: 0 0 0 12px;}
 .i .fg{width: 20px;}
 .i .fg div{width: 14px;height: 14px;background-image: url("../images/maild.png");background-repeat: no-repeat;background-position: -32px -160px;}
+
+.selbarbt{background: #f4f4f4;border-top: 1px solid #fff;border-bottom: 1px solid #fff;}
+.barspace2{padding-left: 9px;height: 19px;padding-top: 5px;}
+.addrtitle{color: #8fa7b3;}
+.fn b{font-weight: bold;}
