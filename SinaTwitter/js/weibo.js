@@ -158,7 +158,7 @@ $(function(){
 		$(".replyexpand").hide();
 	});
 
-	$(".zan").click(function(){
+	$(".zan,.zan1").click(function(){
 		var left = parseInt($(this).offset().left)+10;
 		var top =  parseInt($(this).offset().top)-10;
 		var obj=$(this);
@@ -175,4 +175,52 @@ $(function(){
 		$(this).parent().parent().next().show();
 		return false;
 	});
+
+	$(window).scroll(function(){
+        var scroll_top = $(document).scrollTop();
+        if (scroll_top != 0){
+        	$(".wgotop").css("visibility","visible");
+        }
+        else{
+        	$(".wgotop").css("visibility","hidden");
+        }           
+    });
+
+    $(".replyexpand").click(function(){
+    	return false;
+    });
+
+    $(".hh")
 });
+
+function addreply(){
+	var html="";
+	html+='<div class="wbarrow">';
+	html+='	<em class="line1c">◆</em>';
+	html+='	<span class="bg4c">◆</span>';
+	html+='</div>';
+	html+='<div class="line1 input clearfix">';
+	html+='	<div>';
+	html+='		<textarea class="winput"></textarea>';
+	html+='	</div>';
+	html+='	<div class="action">';
+	html+='		<span class="wico16 icofaces"></span>';
+	html+='		<ul class="commonedlist">';
+	html+='			<li>';
+	html+='				<label>';
+	html+='				<input class="wcheckbox" type="checkbox">同时转发到我的微博';
+	html+='				</label>';
+	html+='			</li>';
+	html+='		</ul>';
+	html+='	</div>';
+	html+='	<p class="btn">';
+	html+='		<a class="wbtna">';
+	html+='			<span class="btn30px wfl4">';
+	html+='				<b></b>';
+	html+='				<em class="btntext">评论</em>';
+	html+='			</span>';
+	html+='		</a>';
+	html+='	</p>';
+	html+='</div>';	
+	$(".wbmediaexpand").append(html);
+}
