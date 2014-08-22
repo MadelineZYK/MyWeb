@@ -155,25 +155,55 @@ $(function(){
 	$(document).click(function(){
 		$(".groupsort").hide();
 		$(".smartsort").find(".warrow").find("em").css({"border-color":"","margin":""});
-		$(".replyexpand").hide();
+		// $(".replyexpand").hide();
 	});
 
 	$(".zan,.zan1").click(function(){
-		var left = parseInt($(this).offset().left)+10;
-		var top =  parseInt($(this).offset().top)-10;
+		var ii = $(this).attr("ifzan");
 		var obj=$(this);
-  		$(this).append('<div id="zhan"><b>+1<\/b></\div>');
-  		$('#zhan').css({'position':'absolute','z-index':'1', 'color':'#C30','left':left+'px','top':top+'px'}).animate({top:top-10,left:left+10},'slow',function(){
-	   		$(this).fadeIn('fast').remove();
-	   		var Num = parseInt(obj.find('span').text());
-	       		Num++;
-	    	obj.find('span').text(Num);
-    	});
+		var Num = parseInt(obj.find('span').text());
+		if(ii==0){
+			var left = parseInt($(this).offset().left)+10;
+			var top =  parseInt($(this).offset().top)-10;			
+	  		$(this).append('<div id="zhan"><b>+1<\/b></\div>');
+	  		$('#zhan').css({'position':'absolute','z-index':'1', 'color':'#C30','left':left+'px','top':top+'px'}).animate({top:top-10,left:left+10},'slow',function(){
+		   		$(this).fadeIn('fast').remove();
+		   		var shu=Num+1;
+		    	obj.find('span').text(shu);
+	    	});
+	    	$(this).find("em").css("background-position","-100px 0");
+	    	$(this).attr("ifzan","1");
+    	}else{
+    		var ss=Num-1;
+    		obj.find('span').text(ss);
+    		$(this).find("em").css("background-position","");
+	    	$(this).attr("ifzan","0");
+    	}
 	});
 
 	$(".pl").click(function(){
-		$(this).parent().parent().next().show();
-		return false;
+		var yy=$(this).attr("isopen");
+		var con=$(this).attr("ifc");
+		var pp=$(this).attr("pindex");
+		if(yy=="no"&&con=="0"){
+			addsreply(pp);
+			addkuang(pp);
+			$(".dahuifu"+pp).show();
+			$(this).attr("isopen","yes");
+		}
+		if(yy=="no"&&con=="1"){
+			$(".dahuifu"+pp).show();
+			$(this).attr("isopen","yes");
+		}
+		if(yy=="yes"&&con=="0"){
+			$(".dahuifu"+pp).empty();
+			$(".dahuifu"+pp).hide();
+			$(this).attr("isopen","no");
+		}	
+		if(yy=="yes"&&con=="1"){
+			$(".dahuifu"+pp).hide();
+			$(this).attr("isopen","no");
+		}	
 	});
 
 	$(window).scroll(function(){
@@ -186,15 +216,37 @@ $(function(){
         }           
     });
 
-    $(".replyexpand").click(function(){
-    	return false;
+    // $(".replyexpand").click(function(){
+    // 	return false;
+    // });
+
+    $(document).on("click",".hh",function(){
+    	var ss=$(this).attr("iso");
+    	var n=$(this).attr("rindex");
+    	if(ss=="no"){
+    		addreply(n);
+    		$(this).attr("iso","yes");
+    		$(".rereply"+n).show();
+    	}else{
+    		$(".rereply"+n).empty();
+    		$(".rereply"+n).hide();
+    		$(this).attr("iso","no");
+    	}   	
     });
 
-    $(".hh")
+
+	$(document).on("click",".btntext",function(){
+		var b=$(this).attr("bindex");
+    	var c=$(this).parent().parent().parent().parent().find(".winput").val();
+    	appendreply(c,b);
+    	$(this).parent().parent().parent().parent().find(".winput").val("");
+    	$(this).parent().parent().parent().parent().parent().parent().prev().find(".pl").attr("ifc","1");
+	});
 });
 
-function addreply(){
+function addsreply(n){
 	var html="";
+	html+='<div class="replyexpand line1 bg4">';
 	html+='<div class="wbarrow">';
 	html+='	<em class="line1c">◆</em>';
 	html+='	<span class="bg4c">◆</span>';
@@ -217,10 +269,153 @@ function addreply(){
 	html+='		<a class="wbtna">';
 	html+='			<span class="btn30px wfl4">';
 	html+='				<b></b>';
-	html+='				<em class="btntext">评论</em>';
+	html+='				<em class="btntext" bindex='+n+'>评论</em>';
+	html+='			</span>';
+	html+='		</a>';
+	html+='	</p>';
+	html+='</div>';
+	html+='<div id="ccru'+n+'"></div>';	
+	html+='</div>';	
+	$(".dahuifu"+n).append(html);
+}
+
+//回复的回复框
+function addreply(n){
+	var html="";
+	html+='<div class="wbmediaexpand repeat line1 bg1">';
+	html+='<div class="wbarrow">';
+	html+='	<em class="line1c">◆</em>';
+	html+='	<span class="bg4c">◆</span>';
+	html+='</div>';
+	html+='<div class="line1 input clearfix">';
+	html+='	<div>';
+	html+='		<textarea class="winput"></textarea>';
+	html+='	</div>';
+	html+='	<div class="action">';
+	html+='		<span class="wico16 icofaces"></span>';
+	html+='		<ul class="commonedlist">';
+	html+='			<li>';
+	html+='				<label>';
+	html+='				<input class="wcheckbox" type="checkbox">同时转发到我的微博';
+	html+='				</label>';
+	html+='			</li>';
+	html+='		</ul>';
+	html+='	</div>';
+	html+='	<p class="btn">';
+	html+='		<a class="wbtna">';
+	html+='			<span class="btn30px wfl4">';
+	html+='				<b></b>';
+	html+='				<em class="btntext" bindex='+n+'>评论</em>';
 	html+='			</span>';
 	html+='		</a>';
 	html+='	</p>';
 	html+='</div>';	
-	$(".wbmediaexpand").append(html);
+	html+='</div>';	
+	$(".rereply"+n).append(html);
+}
+
+function appendreply(c,b){
+	var d=new Date();
+	var Time = new Date();
+	var h = Time.getHours()<10?"0"+Time.getHours():Time.getHours();
+	var m = Time.getMinutes()<10?"0"+Time.getMinutes():Time.getMinutes();
+	var s = Time.getSeconds()<10?"0"+Time.getSeconds():Time.getSeconds();
+	var T = h+":"+m+":"+s;
+	var html="";
+	html+='<dl class="commentlist line1">';
+	html+='	<dt>';
+	html+='		<a href="#">';
+	html+='			<img src="images/user.jpg">';
+	html+='		</a>';
+	html+='	</dt>';
+	html+='	<dd>';
+	html+='		<a href="#">Wing_yk</a>：'+c+'('+T+')';
+	html+='		<div class="info">';
+	html+='			<span class="wlinkb">';
+	html+='				<em class="hover">';
+	html+='					<a href="#">举报</a>';
+	html+='					<em class="txt3">|</em>';
+	html+='				</em>';
+	html+='				<a class="zan1" ifzan="0">';
+	html+='					<em class="wico20 iconpraisedb"></em>';
+	html+='					(<span>0</span>)';
+	html+='				</a>';
+	html+='				<i class="txt3">|</i>';
+	html+='				<a class="hh" href="#" rindex="3">回复</a>';
+	html+='			</span>';
+	html+='		</div>';
+	html+='		<div class="rereply3"></div>';
+	html+='	</dd>';
+	html+='	<dd class="clear"></dd>';
+	html+='</dl>';
+	$(".commentlists"+b).append(html);
+}
+
+function addkuang(x){
+	var html="";
+	html+='<div class="tabb txt3 line1">';
+	html+='	<span class="txt2">共2条</span>';
+	html+='	<a class="currenta txt1">全部</a>';
+	html+='	<i class="wvline">|</i>';
+	html+='	<a class="func1">热门</a>';
+	html+='	<i class="wvline">|</i>';
+	html+='	<a class="func1">认证用户</a>';
+	html+='	<i class="wvline">|</i>';
+	html+='	<a class="func1">关注的人</a>';
+	html+='</div>';
+	html+='<div class="commentlists'+x+'">';
+	html+='	<dl class="commentlist line1">';
+	html+='		<dt>';
+	html+='			<a href="#">';
+	html+='				<img src="images/p1.jpg">';
+	html+='			</a>';
+	html+='		</dt>';
+	html+='		<dd>';
+	html+='			<a href="#">沫迹Sissi</a>：加油！ (8月20日 19:01)';
+	html+='			<div class="info">';
+	html+='				<span class="wlinkb">';
+	html+='					<em class="hover">';
+	html+='						<a href="#">举报</a>';
+	html+='						<em class="txt3">|</em>';
+	html+='					</em>';
+	html+='					<a class="zan1" ifzan="0">';
+	html+='						<em class="wico20 iconpraisedb"></em>';
+	html+='						(<span>6</span>)';
+	html+='					</a>';
+	html+='					<i class="txt3">|</i>';
+	html+='					<a class="hh" rindex="1" iso="no">回复</a>';
+	html+='				</span>';
+	html+='			</div>';
+	html+='			<div class="rereply1"></div>';
+	html+='		</dd>';
+	html+='		<dd class="clear"></dd>';
+	html+='	</dl>';	
+	html+=' <dl class="commentlist line1">';
+	html+='		<dt>';
+	html+='			<a href="#">';
+	html+='				<img src="images/p2.jpg">';
+	html+='			</a>';
+	html+='		</dt>';
+	html+='		<dd>';
+	html+='			<a href="#">Sissi</a>：加油!!!!!!!!！ (8月21日 12:32)';
+	html+='			<div class="info">';
+	html+='				<span class="wlinkb">';
+	html+='					<em class="hover">';
+	html+='						<a href="#">举报</a>';
+	html+='						<em class="txt3">|</em>';
+	html+='					</em>';
+	html+='					<a class="zan1" ifzan="0">';
+	html+='						<em class="wico20 iconpraisedb"></em>';
+	html+='						(<span>2</span>)';
+	html+='					</a>';
+	html+='					<i class="txt3">|</i>';
+	html+='					<a class="hh" rindex="2">回复</a>';
+	html+='				</span>';
+	html+='			</div>';
+	html+='			<div class="rereply2"></div>';
+	html+='		</dd>';
+	html+='		<dd class="clear"></dd>';
+	html+='	</dl>';
+	html+='</div>';
+	$("#ccru"+x).append(html);
 }

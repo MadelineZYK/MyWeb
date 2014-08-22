@@ -1,5 +1,5 @@
 *{margin:0;padding: 0;}
-a{text-decoration: none;color: #0a8cd2;}
+a{text-decoration: none;color: #0a8cd2;cursor: pointer;}
 ul,li{list-style: none;}
 img,fieldset{border: 0;}
 i{font-style: normal;font-weight: normal;}
@@ -348,7 +348,7 @@ dd {display: block;-webkit-margin-start: 40px;}
 
 .globalfooter{margin: 20px auto;width: 980px;margin-bottom: 0;}
 
-.replyexpand{display: none; border-width: 1px;border-style: solid;padding: 10px 20px 10px;border-radius: 3px;line-height: 20px;margin: 10px 0 0;}
+.replyexpand{border-width: 1px;border-style: solid;padding: 10px 20px 10px;border-radius: 3px;line-height: 20px;margin: 10px 0 0;}
 .winput{width: 99%; overflow: hidden;margin: 0px 0px 5px;padding: 5px 0px 0px 2px;border-style: solid;border-width: 1px;font-size: 12px;font-family: Tahoma, 宋体;word-wrap: break-word;line-height: 18px;outline: none;height: 23px;}
 .icofaces{float: left;display: inline;margin: 4px 10px 0 0;background-position: -275px 0px;cursor: pointer;}
 .commonedlist{float: left;margin-top: 3px;}
