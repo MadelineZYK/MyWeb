@@ -1,0 +1,365 @@
+<html>
+<head>
+	<title>WebQQ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/webqq.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/webqq.js"></script>
+</head>
+<body class="black">
+	<div id="bgAllImage">
+		<img class="bgAllImage" src="css/image/1.jpg">
+	</div>
+	<div class="draggableBox"></div>
+	<div class="wrap">
+		<div class="mainContainer">
+			<div class="mainPanel">
+				<div class="panelBodyContainer">
+					<div class="panelBody">
+						<div id="mainTopAll">
+							<div class="accountHeader">
+								<div class="avatarWrap">
+									<img src="images/userhead.jpg">
+									<span class="userOnlineState"></span>
+								</div>
+								<span class="textUserNick">翎</span>
+								<span class="textUserShuoShuo"></span>
+								<div class="iconsList">
+									<a href="http://qzone.qq.com" class="i_qzone" target="_blank" title="QQ空间">QQ空间</a>
+									<a href="http://mail.qq.com" class="i_mail" target="_blank" title="QQ邮箱">QQ邮箱</a>
+									<a href="http://t.qq.com" class="i_weibo" target="_blank" title="腾讯微博">腾讯微博</a>
+									<a href="http://v.qq.com" class="i_video" target="_blank" title="腾讯视频">腾讯视频</a>
+									<a href="http://www.qq.com" class="i_qqwebsite" target="_blank" title="腾讯网">腾讯网</a>
+									<a href="http://y.qq.com" class="i_music" target="_blank" title="QQ音乐">QQ音乐</a>
+									<a href="http://wallet.tenpay.com/web/" class="i_wallet" target="_blank" title="QQ钱包">QQ钱包</a>
+									<a href="http://www.pengyou.com" class="i_pengyou" target="_blank" title="朋友网">朋友网</a>
+									<a href="http://www.weiyun.com" class="i_weiyun" target="_blank" title="微云">微云</a>
+								</div>
+							</div>
+						</div>
+						<div class="panel selectPanel" id="panel1">
+							<header class="panelHeader">
+								<h1 class="panelTitle">会话</h1>
+							</header>
+							<div class="panelBodyWrapper">
+								<div class="panelBodyWrapperBox">
+									<div class="currentChatScrollArea">
+										<ul class="currentChatList currentChatScrollAreaList">
+
+											<!-- 添加会话 -->
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel" id="panel2">
+							<header class="panelHeader">
+								<h1 class="panelTitle">联系人</h1>
+							</header>
+							<div class="panelBodyWrapper">
+								<div class="panelBodyWrapperBox">
+									<div class="currentChatScrollArea">
+										<ul class="memberTab">
+											<li class="memberTabLi selectmemberTabLi">好友</li>
+											<li class="memberTabLi">群</li>
+											<li class="memberTabLi">讨论组</li>
+										</ul>
+										<ul class="memberTabNew">
+											<li class="memberTNBox selectmemTNBox">
+												<ul class="memberTNBU">
+													<li class="memberTNBULiGroup">
+														<div class="memberTNBULiGroupD">
+															<span class="memberName">翼狂曲</span>
+															<span class="memberNum">0/0</span>
+														</div>
+														<ul class="currentChatList memberTNBULiM" isshow="false">
+
+														</ul>
+													</li>
+													<li class="memberTNBULiGroup">
+														<div class="memberTNBULiGroupD">
+															<span class="memberName">The&Known</span>
+															<span class="memberNum">44/83</span>
+														</div>
+														<ul class="currentChatList memberTNBULiM" isshow="false">
+															<li class="listItem Ltqq5" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/r1.jpg">
+																</a>
+																<p class="memberNick">张伊琳<span>(枫铃)</span></p>
+																<p class="memberMsg">[在线]</p>
+															</li>
+															<li class="listItem Ltqq6" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/r2.jpg">
+																</a>
+																<p class="memberNick">史玲玲<span>(⊙·⊙叼着奶嘴闲逛的娃~)</span></p>
+																<p class="memberMsg">[在线]</p>
+															</li>
+															<li class="listItem Ltqq7" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/r3.jpg">
+																</a>
+																<p class="memberNick">江晓玲<span>(梦做一半也不美。)</span></p>
+																<p class="memberMsg">[在线]</p>
+															</li>
+															<li class="listItem Ltqq7" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/r4.jpg">
+																</a>
+																<p class="memberNick">庄佳乐<span>(蝉想)</span></p>
+																<p class="memberMsg">[在线]</p>
+															</li>
+															<li class="listItem Ltqq7" showchatPanel="false" isshow="false">
+																<a href="#" class="avatar">
+																	<img src="images/r5.jpg">
+																</a>
+																<p class="memberNick">陆晓倩<span>(summer)</span></p>
+																<p class="memberMsg">[离线]</p>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="memberTNBox">
+												<ul class="currentChatList">
+													<li class="listItem Ltqq13" showchatPanel="false" isshow="false">
+														<a href="#" class="avatar">
+															<img src="images/getface.jpg">
+														</a>
+														<p class="memberNick">給力づ ˊfive．</p>
+														<p class="memberMsg"></p>
+													</li>
+													<li class="listItem Ltqq14" showchatPanel="false" isshow="false">
+														<a href="#" class="avatar">
+															<img src="images/getface.jpg">
+														</a>
+														<p class="memberNick">1103~淮师计科</p>
+														<p class="memberMsg"></p>
+													</li>
+													<li class="listItem Ltqq15" showchatPanel="false" isshow="false">
+														<a href="#" class="avatar">
+															<img src="images/getface.jpg">
+														</a>
+														<p class="memberNick">Happy家庭</p>
+														<p class="memberMsg"></p>
+													</li>
+												</ul>
+											</li>
+											<li class="memberTNBox">
+											</li>
+										</ul>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel" id="panel3">
+							<header class="panelHeader">
+								<h1 class="panelTitle">发现</h1>
+							</header>
+							<div class="panelBodyWrapper">
+								<div class="panelBodyWrapperBox">
+									<ul class="pluginList">
+										<li>
+											<span class="pluginListicon qzoneicon"></span>
+											<a href="##">QQ空间</a>
+										</li>
+										<li>
+											<span class="pluginListicon qemailicon"></span>
+											<a href="##">QQ邮箱</a>
+										</li>
+										<li>
+											<span class="pluginListicon qwebicon"></span>
+											<a href="##">腾讯网 </a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="panel" id="panel4">
+							<header class="panelHeader">
+								<h1 class="panelTitle">设置</h1>
+							</header>
+							<div class="panelBodyWrapper">
+								<div class="panelBodyWrapperBox">
+									<div class="panel4group">
+										<div class="panel4row">
+											<div class="rowPic">
+												<img class="avatar" src="images/userhead.jpg">
+											</div>
+											<div class="rowName">
+												<span class="rowNameUp">翎</span>
+												<span class="rowNameDown">529351033</span>
+											</div>
+											<div class="rowSet">
+												<li class="rowSetLi rowSetL"></li>
+												<li class="rowSetLi rowSetR"></li>
+												<ul class="rowSetC" isshow="false">
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon online_icon"></span>在线
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon callme_icon"></span>Q我
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon away_icon"></span>离开
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon busy_icon"></span>忙碌
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon silent_icon"></span>静音
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon hidden_icon"></span>隐身
+													</li>
+													<li class="rowSetCLi">
+														<span class="rowSetCLiIcon offline_icon"></span>离线
+													</li>
+												</ul>
+
+											</div>
+										</div>
+
+									</div>	
+
+									<div class="panel4group">
+										<div class="panel4row panel4rowS">
+											消息相关设置
+											<span class="moreIcon"></span>
+										</div>
+									</div>	
+									<div class="panel4group">
+										<div class="panel4row aboutQQClick">
+											关于QQ
+											<span class="moreIcon"></span>
+										</div>
+									</div>
+									<div class="panel4group aboutQQ" isshow="false">
+										<div class="panel4row aboutQQ1">
+											<span class="aboutQQ1S">当前版本：</span>
+											V1.0
+										</div>
+										<div class="panel4row aboutQQ2">
+											服务条款
+										</div>
+										<div class="panel4row aboutQQ3">
+											帮助与反馈
+											<span class="moreIcon"></span>
+										</div>
+									</div>
+
+									<div class="panel4group">
+										<div class="panel4row loginout">
+											退出当前帐号
+										</div>
+									</div>	
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="panelFooter" >
+					<nav id="navTab">
+						<ul class="navTHead">
+							<li id="session" class="nav navSelected" num="1">
+								<a href="##">
+									<div class="icon"></div>
+									<span>会话</span>
+								</a>
+							</li>
+							<li id="contact" class="nav" num="2">
+								<a href="##">
+									<div class="icon"></div>
+									<span>联系人</span>
+								</a>
+							</li>
+							<li id="plugin" class="nav" num="3">
+								<a href="##">
+									<div class="icon"></div>
+									<span>发现</span>
+								</a>
+							</li>
+							<li id="setting" class="nav" num="4">
+								<a href="##">
+									<div class="icon"></div>
+									<span>设置</span>
+								</a>
+							</li>
+						</ul>
+						<div class="changBg">
+							<a href="##" class="change changBgFre" title="点击切换背景图片"></a>
+							<a href="##" class="change changBgNext" title="点击切换背景图片"></a>
+						</div>
+						<div class="suggestion">
+							<a href="#">意见反馈</a>
+						</div>
+					</nav>
+				</footer>
+			</div>
+		</div>
+
+		<div id="container">
+
+
+			<div class="panelNotifySetting">
+				<div class="panelSetHeader">
+					<div class="panelSetHeaderButtonL panelSetHeaderB"></div>
+					<div class="panelSetHeaderButton panelSetHeaderButtonS panelSetHeaderB">
+						<span class="panelSetHeaderButtonI">设置</span>
+					</div>
+					<h1 class="panelNotifySet">消息相关设置</h1>
+				</div>
+				<div class="panelNotifySetBody">
+					<div class="panelNotifySetBodyBox">
+						<div class="panelNSBBgroup">
+							<div class="panelNSBBgroupRow panelNSBBgroupRowU">
+								<span class="panelNSBBgroupC">声音</span>
+								<div class="switch">
+									<input type="checkbox">
+									<span></span>
+								</div>
+							</div>
+							<div class="panelNSBBgroupRow panelNSBBgroupRowD">
+								<span class="panelNSBBgroupC">消息浮窗</span>
+								<div class="switch">
+									<input type="checkbox">
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="panelNSBBgroup">
+							<div class="panelNSBBgroupRow">
+								<div class="panelNSBBgroupRB">
+									<span class="panelNSBBgroupC">HTTPS</span>
+									<div class="switch">
+										<input type="checkbox">
+										<span></span>
+									</div>
+								</div>
+								<div class="tips">使用 HTTPS 加密聊天内容</div>
+							</div>
+						</div>
+						<div class="panelNSBBgroup">
+							<div class="panelNSBBgroupRow">
+								<div class="panelNSBBgroupRB">
+									<span class="panelNSBBgroupC">按Ctrl+Enter键发送消息</span>
+									<div class="switch">
+										<input type="checkbox">
+										<span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

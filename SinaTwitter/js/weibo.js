@@ -181,6 +181,29 @@ $(function(){
     	}
 	});
 
+	$(document).on("click",".zan1",function(){
+		var ii = $(this).attr("ifzan");
+		var obj=$(this);
+		var Num = parseInt(obj.find('span').text());
+		if(ii==0){
+			var left = parseInt($(this).offset().left)+10;
+			var top =  parseInt($(this).offset().top)-10;			
+	  		$(this).append('<div id="zhan"><b>+1<\/b></\div>');
+	  		$('#zhan').css({'position':'absolute','z-index':'1', 'color':'#C30','left':left+'px','top':top+'px'}).animate({top:top-10,left:left+10},'slow',function(){
+		   		$(this).fadeIn('fast').remove();
+		   		var shu=Num+1;
+		    	obj.find('span').text(shu);
+	    	});
+	    	$(this).find("em").css("background-position","-100px 0");
+	    	$(this).attr("ifzan","1");
+    	}else{
+    		var ss=Num-1;
+    		obj.find('span').text(ss);
+    		$(this).find("em").css("background-position","");
+	    	$(this).attr("ifzan","0");
+    	}
+	});
+
 	$(".pl").click(function(){
 		var yy=$(this).attr("isopen");
 		var con=$(this).attr("ifc");
