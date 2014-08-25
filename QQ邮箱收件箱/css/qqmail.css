@@ -156,3 +156,5 @@ u{outline: medium none;text-decoration: none;}
 .xla{display: none; position: absolute;top: 59px;left: 368px;z-index: 1121;height: 153px; border: 1px solid #ccc;border-radius: 2px; background-color: #fff;}
 .xla li{width: 65px;height: 30px;background-color: #fff;line-height: 30px;padding: 0 0 0 16px;border-bottom: 1px solid #ccc;}
 .xla li a{color: #000;text-align: center;}
+
+#qqmailcontainer1{display: none;}

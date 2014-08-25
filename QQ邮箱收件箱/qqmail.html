@@ -91,7 +91,7 @@
 						<div id="outfolder">
 							<div id="sysfolderlist">
 								<ul class="fdul">
-									<li class="fn">
+									<li class="fn" id="sjx">
 										<a href="#" class="fsize">
 											<b>收件箱</b>
 											<b class="weidushu">(
@@ -113,7 +113,7 @@
 									<li class="fs">
 										<a href="#" class="fsize">已发送</a>
 									</li>
-									<li class="fs">
+									<li class="fs" id="ysc">
 										<a href="#" class="fsize">已删除</a>
 									</li>
 									<li class="fs" id="folder6">
@@ -205,16 +205,16 @@
 					<li class="ydyj">
 						<a>已读邮件</a>
 					</li>
-					<li>
+					<li class="wdyj">
 						<a>未读邮件</a>
 					</li>
 					<li>
 						<a>广告邮件</a>
 					</li>
-					<li>
+					<li class="xbyj">
 						<a>星标邮件</a>
 					</li>
-					<li>
+					<li class="qxxb">
 						<a>取消星标</a>
 					</li>
 					<li>
@@ -265,7 +265,7 @@
 							<tbody>
 								<tr>
 									<td style="padding:1px 0 1px 5px;" width="27">
-										<input type="checkbox" id="ckbselectall" choice="no" bz="2">
+										<input type="checkbox" class="ckbselectall" choice="no" bz="2">
 									</td>
 									<td style="width:31px;padding:0 0 0 6px;">
 										<input type="button" class="icomailtitle" disabled>
@@ -1771,6 +1771,265 @@
 						</div>
 					</div>
 				</div>
+
+
+				<div class="mailcontainer" id="qqmailcontainer1">
+					<div class="txttitle">
+						已删除
+						<span id="ut" class="fsize normal black">
+							(共&nbsp;
+							<span id="utc">3</span>
+							 &nbsp;封)
+						</span>
+					</div>
+
+					<div id="frm">
+						<div class="toolbg toolbgline toolheight nowrap">
+							<div class="right">
+								1/1 页&nbsp;
+								<a href="#" id="nextpage">下一页</a>&nbsp;
+								<a href="#" id="maillistjump">跳转</a> 
+							</div>
+							<div class="nowrap left">
+								<a class="btngray btnspace" id="quickdel">删除</a>
+								<a class="btngray btnspace" id="quickcompletelydel">彻底删除</a>
+								<a class="btngray btnspace">转发</a>
+								<a class="btngray btnspace" id="btnreportspam">举报</a>
+								<a class="btngray btnspace" id="setallreaded">全部标为已读</a>
+								<span id="markcontainer" class="btnspace">
+									<a class="btngray btndropdown">
+										<span class="btnselexttxt">标记为...	
+										</span>
+										<span class="icoselects"></span>
+									</a>
+								</span>
+								<span id="selmcontainer">
+									<a class="btngray btndropdown">
+										<span class="btnselexttxt">移动到...</span>
+										<span class="icoselects"></span>
+									</a>
+								</span>
+							</div>
+						</div>
+
+						<table class="o2">
+							<tbody>
+								<tr>
+									<td style="padding:1px 0 1px 5px;" width="27">
+										<input type="checkbox" class="ckbselectall" choice="no" bz="2">
+									</td>
+									<td style="width:31px;padding:0 0 0 6px;">
+										<input type="button" class="icomailtitle" disabled>
+									</td>
+									<td class="otitle2" style="width: 135px;padding-left:10px;">
+										<a>发件人</a>
+									</td>
+									<td class="otitle2" style="padding-left:10px;">
+										<a>主题</a>
+									</td>
+									<td class="otitle2" style="padding-left: 2px;width: 120px;">
+										<div style="margin-left: 10px;">
+											<a href="#">时间↓</a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="selectall" class="graytipcon">
+							<div class="graytip">
+								<div id="divmailinfo">已勾选本页&nbsp; 3&nbsp; 封邮件，
+									<a>勾选"已删除"中全部&nbsp; 3 &nbsp;封邮件</a>
+								</div>
+								<div class="selectmail">已勾选 &nbsp;
+									<span>3</span> &nbsp;封邮件，
+									<a>取消勾选</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="bd talk">
+							<input type="checkbox" class="one" bz="2">
+							<a class="curdefault">
+								<label>
+									<b>今天</b> (
+									<span class="newfd underline">1</span>封)
+								</label>
+							</a>
+						</div>
+						<div class="xinsc"></div>
+						<div class="toarea">
+							<table class="i m">
+								<tbody>
+									<tr>
+										<td class="cx">
+											<input class="cb" type="checkbox" bz="0">
+										</td>
+										<td class="ci">
+											<div class="cir rr"></div>
+										</td>
+										<td class="l">
+											<table class="i">
+												<tbody>
+													<tr>
+														<td class="t1 tf">
+															<b>翎</b>
+														</td>
+														<td class="fgn">
+															<div></div>
+														</td>
+														<td class="gt">
+															<div class="tf no">
+																<u class="black tt">asd</u>
+															</div>
+														</td>
+														<td class="dt">
+															<div>3分钟前</div>
+														</td>
+														<td class="fg">
+															<div></div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+
+						<div class="bd talk">
+							<input type="checkbox" class="one" bz="2">
+							<a class="curdefault">
+								<label>
+									<b>昨天</b> (
+									<span class="newfd underline">2</span> 封)
+								</label>
+							</a>
+						</div>
+
+						<div class="toarea">
+							<table class="i m">
+								<tbody>
+									<tr>
+										<td class="cx">
+											<input class="cb" type="checkbox" bz="1">
+										</td>
+										<td class="ci">
+											<div class="cir rr"></div>
+										</td>
+										<td class="l">
+											<table class="i">
+												<tbody>
+													<tr>
+														<td class="t1 tf">
+															<b>12306@rails.com.cn </b>
+														</td>
+														<td class="fgn">
+															<div></div>
+														</td>
+														<td class="gt">
+															<div class="tf no">
+																<u class="black tt">网上购票系统-用户支付通知</u>
+																<b class="no">&nbsp;&nbsp;尊敬的张羽柯女士：&nbsp;&nbsp;  您好！&nbsp;&nbsp;  您于2014年08月19日在中国铁路客户服务中心网站（www.12306.cn)成功购买了1&nbsp;</b>
+															</div>
+														</td>
+														<td class="dt">
+															<div>3小时前</div>
+														</td>
+														<td class="fg">
+															<div></div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="i m">
+								<tbody>
+									<tr>
+										<td class="cx">
+											<input class="cb" type="checkbox" bz="1">
+										</td>
+										<td class="ci">
+											<div class="cir rr"></div>
+										</td>
+										<td class="l">
+											<table class="i">
+												<tbody>
+													<tr>
+														<td class="t1 tf">
+															<b>广告邮件</b>
+														</td>
+														<td class="fgn">
+															<div></div>
+														</td>
+														<td class="gt">
+															<div class="tf no">
+																<u class="black tt">Pinterest: Another thing you can do on Pinterest: Renovate your home!</u>
+															</div>
+														</td>
+														<td class="dt">
+															<div>今天 07:40</div>
+														</td>
+														<td class="fg">
+															<div></div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="listbtline">
+							<div class="fsize selbarbt barspace2">
+								<span class="addrtitle">选择：</span>
+								&nbsp;
+								<a href="#" class="a1">全部</a>
+								&nbsp;&nbsp;
+								<a href="#" class="w1">无</a>
+								&nbsp;&nbsp;
+								<a href="#" class="y1">已读</a>
+								&nbsp;&nbsp;
+								<a href="#" class="w2">未读</a>
+							</div>
+						</div>
+
+						<div class="toolbg toolbgline toolheight nowrap">
+							<div class="right">
+								1/1 页&nbsp;
+								<a href="#" id="nextpage">下一页</a>&nbsp;
+								<a href="#" id="maillistjump">跳转</a> 
+							</div>
+							<div class="nowrap left">
+								<a class="btngray btnspace" id="quickdel1">删除</a>
+								<a class="btngray btnspace" id="quickcompletelydel">彻底删除</a>
+								<a class="btngray btnspace">转发</a>
+								<a class="btngray btnspace" id="btnreportspam">举报</a>
+								<a class="btngray btnspace" id="setallreaded">全部标为已读</a>
+								<span id="markcontainer" class="btnspace">
+									<a class="btngray btndropdown">
+										<span class="btnselexttxt">标记为...</span>
+										<span class="icoselects"></span>
+									</a>
+								</span>
+								<span id="selmcontainer">
+									<a class="btngray btndropdown">
+										<span class="btnselecttxt">移动到...</span>
+										<span class="icoselects"></span>
+									</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>

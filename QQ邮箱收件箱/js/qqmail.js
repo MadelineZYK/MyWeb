@@ -16,7 +16,7 @@ $(function(){
 	});
 //全选，已读，删除，垃圾箱
 
-	$("#ckbselectall").click(function(){
+	$(".ckbselectall").click(function(){
 		if($(this).is(':checked')){
 			$(".cb").each(function(){
 				$(this).prop("checked", true);
@@ -67,8 +67,12 @@ $(function(){
 	$("#quickdel,#quickdel1").click(function(){
 		$(".cb").each(function(){
 			if($(this).is(':checked')){
+				var rr=$(this).parent().next().next().find(".t1").find("b").html();
+				var zz=$(this).parent().next().next().find(".gt").find(".black").html();
+				var tt=$(this).parent().next().next().find(".dt").find("div").html();
 				var i=$(this).parent().parent().parent().parent().parent().prev().find("span").html()-1;
 				$(this).parent().parent().parent().parent().hide();
+				zhuanyi(rr,zz,tt);
 				$(this).prop("checked",false);
 				$(this).parent().parent().parent().parent().parent().prev().find("span").html(i);
 				var ch=$(this).attr("bz");
@@ -80,6 +84,8 @@ $(function(){
 						$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().prev().find(".wds").html(j);
 					}
 				}
+				$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().prev().find("#ysc").find(".fsize").css("text-align","left");
+				$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().prev().find("#ysc").append('<a href="#" class="nolinkbg normal fdleft emptylink">[清空]<\/a>');
 			}
 		});
 	});//删除选中的项
@@ -119,6 +125,41 @@ $(function(){
 		});
 	});
 
+	//标记未读
+	$(".wdyj").click(function(){
+		$(".cb").each(function(){
+			if ($(this).is(':checked')) {
+				$(this).parent().next().find("div").removeClass("rr").addClass("ru");
+				$(this).parent().next().next().find("*").addClass("bold");
+				$(this).prop("checked",false);
+				$(this).attr("bz","0");
+				var j=$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().prev().find(".wds").html();
+				j++;
+				$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().prev().find(".wds").html(j);				
+			}
+		});
+	});
+
+	//标记星标
+	$(".xbyj").click(function(){
+		$(".cb").each(function(){
+			if ($(this).is(':checked')) {
+				$(this).prop("checked",false);
+				$(this).parent().parent().find(".fg").find("div").css("background-position","-48px -160px");				
+			}
+		});
+	});
+
+	//取消星标
+	$(".qxxb").click(function(){
+		$(".cb").each(function(){
+			if ($(this).is(':checked')) {
+				$(this).prop("checked",false);
+				$(this).parent().parent().find(".fg").find("div").css("background-position","-32px -160px");				
+			}
+		});
+	});
+
 	//全部标记为已读
 	$("#setallreaded").click(function(){
 		$(".cb").each(function(){
@@ -127,4 +168,67 @@ $(function(){
 			$(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().prev().find(".weidushu").html("");
 		});
 	});
+
+	$("#ysc").click(function(){
+		$(this).removeClass("fs").addClass("fn");
+		$(this).prev().prev().prev().prev().prev().removeClass("fn").addClass("fs");
+		$(this).parent().parent().parent().parent().parent().parent().parent().parent().next().find("#qqmailcontainer").hide();
+		$(this).parent().parent().parent().parent().parent().parent().parent().parent().next().find("#qqmailcontainer1").show();
+	});
+
+	
+	$("#sjx").click(function(){
+		$(this).removeClass("fs").addClass("fn");
+		$(this).next().next().next().next().next().removeClass("fn").addClass("fs");
+		$(this).parent().parent().parent().parent().parent().parent().parent().parent().next().find("#qqmailcontainer1").hide();
+		$(this).parent().parent().parent().parent().parent().parent().parent().parent().next().find("#qqmailcontainer").show();
+	});
 });
+
+
+function zhuanyi(ren,zt,time){
+	var html="";
+	html+='<div class="toarea">';
+	html+='	<table class="i m">';
+	html+='		<tbody>';
+	html+='			<tr>';
+	html+='				<td class="cx">';
+	html+='					<input class="cb" type="checkbox" bz="0">';
+	html+='				</td>';
+	html+='				<td class="ci">';
+	html+='					<div class="cir rr"></div>';
+	html+='				</td>';
+	html+='				<td class="l">';
+	html+='					<table class="i">';
+	html+='						<tbody>';
+	html+='							<tr>';
+	html+='								<td class="t1 tf">';
+	html+='									<b>'+ren+'</b>';
+	html+='								</td>';
+	html+='								<td class="fgn">';
+	html+='									<div></div>';
+	html+='								</td>';
+	html+='								<td class="gt">';
+	html+='									<div class="tf no">';
+	html+='										<u class="black tt">'+zt+'</u>';
+	html+='									</div>';
+	html+='								</td>';
+	html+='								<td class="dt">';
+	html+='									<div>'+time+'</div>';
+	html+='								</td>';
+	html+='								<td class="fg">';
+	html+='									<div></div>';
+	html+='								</td>';
+	html+='							</tr>';
+	html+='						</tbody>';
+	html+='					</table>';
+	html+='				</td>';
+	html+='			</tr>';
+	html+='		</tbody>';
+	html+='	</table>';
+	html+='</div>';
+	$(".xinsc").append(html);
+	var ss=$(".curdefault").find("span").html();
+	ss++;
+	$(".curdefault").find("span").html(ss);
+}
