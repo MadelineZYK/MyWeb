@@ -87,12 +87,14 @@ $(function(){
 		$(this).parent().css("border-color","#ffb941");
 		$(this).parent().prev().find(".key").hide();
 		$(this).parent().prev().find(".num").show();
+		$(this).parent().next().find(".wbtnvdisable").find(".btn30px").css({"background-color":"#e64141","color":"#fff"});
 	});
 
 	$(".inputdetail").blur(function(){
 		$(this).parent().css("border-color","");
 		$(this).parent().prev().find(".num").hide();
 		$(this).parent().prev().find(".key").show();
+		$(this).parent().next().find(".wbtnvdisable").find(".btn30px").css({"background-color":"","color":""});
 	});
 
 	$(".wbtnround").hover(function(){
@@ -158,7 +160,7 @@ $(function(){
 		// $(".replyexpand").hide();
 	});
 
-	$(".zan,.zan1").click(function(){
+	$(document).on("click",".zan,.zan1",function(){
 		var ii = $(this).attr("ifzan");
 		var obj=$(this);
 		var Num = parseInt(obj.find('span').text());
@@ -204,7 +206,7 @@ $(function(){
     	}
 	});
 
-	$(".pl").click(function(){
+	$(document).on("click",".pl",function(){
 		var yy=$(this).attr("isopen");
 		var con=$(this).attr("ifc");
 		var pp=$(this).attr("pindex");
@@ -239,10 +241,6 @@ $(function(){
         }           
     });
 
-    // $(".replyexpand").click(function(){
-    // 	return false;
-    // });
-
     $(document).on("click",".hh",function(){
     	var ss=$(this).attr("iso");
     	var n=$(this).attr("rindex");
@@ -264,6 +262,51 @@ $(function(){
     	appendreply(c,b);
     	$(this).parent().parent().parent().parent().find(".winput").val("");
     	$(this).parent().parent().parent().parent().parent().parent().prev().find(".pl").attr("ifc","1");
+	});
+
+	$("#fabu").click(function(){
+		var ccton=$(this).parent().parent().parent().prev().find(".inputdetail").val();
+		addFabu(ccton);
+		$(this).parent().parent().parent().prev().find(".inputdetail").val("");
+	});
+
+	var topp;
+	$(window).scroll(function(){
+		topp=$(this).scrollTop();
+	});
+
+	$(document).on("click",".zf",function(){
+		var dx=$(this).parent().parent().parent().find(".wbname").html();
+		var nr=$(this).parent().parent().parent().find(".wbtext").html();
+		$(".mengban").show();
+		$(".contrans").find(".conttxtlink").html("@"+dx);
+		$(".contrans").find(".contgeyan").html(nr);
+		$(".contrans").css("top",topp+200+'px');
+		$(".contrans").show();
+		$(".concwbrzfbtn").click(function(){
+			var pc=$(".contte").val();
+			zhuanfa(pc,dx,nr);
+			$(".mengban").hide();
+			$(".contrans").hide();
+			$(".contte").val("");
+		});
+		$(".contclose").click(function(){
+			$(".mengban").hide();
+			$(".contrans").hide();
+		});
+	});
+
+	$(".bigcursor").click(function(){
+		var ind=$(this).attr("liindex");
+		$(this).parent().parent().parent().parent().parent().hide();
+		$(this).parent().parent().parent().parent().parent().next().show();
+		$(this).parent().parent().parent().parent().parent().next().find("#ll"+ind).show();
+	});
+
+	$(".smallcursor").click(function(){
+		$(this).find(".epli").hide();
+		$(this).parent().parent().hide();
+		$(this).parent().parent().prev().show();
 	});
 });
 
@@ -299,7 +342,7 @@ function addsreply(n){
 	html+='</div>';
 	html+='<div id="ccru'+n+'"></div>';	
 	html+='</div>';	
-	$(".dahuifu"+n).append(html);
+	$(".dahuifu"+n).prepend(html);
 }
 
 //回复的回复框
@@ -334,7 +377,7 @@ function addreply(n){
 	html+='	</p>';
 	html+='</div>';	
 	html+='</div>';	
-	$(".rereply"+n).append(html);
+	$(".rereply"+n).prepend(html);
 }
 
 function appendreply(c,b){
@@ -364,81 +407,208 @@ function appendreply(c,b){
 	html+='					(<span>0</span>)';
 	html+='				</a>';
 	html+='				<i class="txt3">|</i>';
-	html+='				<a class="hh" href="#" rindex="3">回复</a>';
+	html+='				<a class="hh" rindex="'+b+'">回复</a>';
 	html+='			</span>';
 	html+='		</div>';
-	html+='		<div class="rereply3"></div>';
+	html+='		<div class="rereply'+b+'"></div>';
 	html+='	</dd>';
 	html+='	<dd class="clear"></dd>';
 	html+='</dl>';
-	$(".commentlists"+b).append(html);
+	$(".commentlists"+b).prepend(html);
 }
 
 function addkuang(x){
 	var html="";
-	html+='<div class="tabb txt3 line1">';
-	html+='	<span class="txt2">共2条</span>';
-	html+='	<a class="currenta txt1">全部</a>';
-	html+='	<i class="wvline">|</i>';
-	html+='	<a class="func1">热门</a>';
-	html+='	<i class="wvline">|</i>';
-	html+='	<a class="func1">认证用户</a>';
-	html+='	<i class="wvline">|</i>';
-	html+='	<a class="func1">关注的人</a>';
-	html+='</div>';
+	// html+='<div class="tabb txt3 line1">';
+	// html+='	<span class="txt2">共2条</span>';
+	// html+='	<a class="currenta txt1">全部</a>';
+	// html+='	<i class="wvline">|</i>';
+	// html+='	<a class="func1">热门</a>';
+	// html+='	<i class="wvline">|</i>';
+	// html+='	<a class="func1">认证用户</a>';
+	// html+='	<i class="wvline">|</i>';
+	// html+='	<a class="func1">关注的人</a>';
+	// html+='</div>';
 	html+='<div class="commentlists'+x+'">';
-	html+='	<dl class="commentlist line1">';
-	html+='		<dt>';
-	html+='			<a href="#">';
-	html+='				<img src="images/p1.jpg">';
+	// html+='	<dl class="commentlist line1">';
+	// html+='		<dt>';
+	// html+='			<a href="#">';
+	// html+='				<img src="images/p1.jpg">';
+	// html+='			</a>';
+	// html+='		</dt>';
+	// html+='		<dd>';
+	// html+='			<a href="#">沫迹Sissi</a>：加油！ (8月20日 19:01)';
+	// html+='			<div class="info">';
+	// html+='				<span class="wlinkb">';
+	// html+='					<em class="hover">';
+	// html+='						<a href="#">举报</a>';
+	// html+='						<em class="txt3">|</em>';
+	// html+='					</em>';
+	// html+='					<a class="zan1" ifzan="0">';
+	// html+='						<em class="wico20 iconpraisedb"></em>';
+	// html+='						(<span>6</span>)';
+	// html+='					</a>';
+	// html+='					<i class="txt3">|</i>';
+	// html+='					<a class="hh" rindex="1" iso="no">回复</a>';
+	// html+='				</span>';
+	// html+='			</div>';
+	// html+='			<div class="rereply1"></div>';
+	// html+='		</dd>';
+	// html+='		<dd class="clear"></dd>';
+	// html+='	</dl>';	
+	// html+=' <dl class="commentlist line1">';
+	// html+='		<dt>';
+	// html+='			<a href="#">';
+	// html+='				<img src="images/p2.jpg">';
+	// html+='			</a>';
+	// html+='		</dt>';
+	// html+='		<dd>';
+	// html+='			<a href="#">Sissi</a>：加油!!!!!!!!！ (8月21日 12:32)';
+	// html+='			<div class="info">';
+	// html+='				<span class="wlinkb">';
+	// html+='					<em class="hover">';
+	// html+='						<a href="#">举报</a>';
+	// html+='						<em class="txt3">|</em>';
+	// html+='					</em>';
+	// html+='					<a class="zan1" ifzan="0">';
+	// html+='						<em class="wico20 iconpraisedb"></em>';
+	// html+='						(<span>2</span>)';
+	// html+='					</a>';
+	// html+='					<i class="txt3">|</i>';
+	// html+='					<a class="hh" rindex="2">回复</a>';
+	// html+='				</span>';
+	// html+='			</div>';
+	// html+='			<div class="rereply2"></div>';
+	// html+='		</dd>';
+	// html+='		<dd class="clear"></dd>';
+	// html+='	</dl>';
+	// html+='</div>';
+	$("#ccru"+x).prepend(html);
+}
+
+
+function addFabu(ct){
+	var html="";
+	var curtime=new Date();
+	var hour=curtime.getHours();
+	var min=curtime.getMinutes();
+	var t=hour+":"+min;
+	html+='<div class="wbfeedtype swfun line2">';
+	html+='	<div class="wbscreen">';
+	html+='		<a class="wico12 iconchoose"></a>';
+	html+='	</div>';
+	html+='	<div class="wbfeeddetail line2 clearfix">';
+	html+='		<div class="wbface">';
+	html+='			<a href="#" class="wfaceradius">';
+	html+='				<img src="images/user.jpg">';
 	html+='			</a>';
-	html+='		</dt>';
-	html+='		<dd>';
-	html+='			<a href="#">沫迹Sissi</a>：加油！ (8月20日 19:01)';
-	html+='			<div class="info">';
-	html+='				<span class="wlinkb">';
-	html+='					<em class="hover">';
-	html+='						<a href="#">举报</a>';
-	html+='						<em class="txt3">|</em>';
-	html+='					</em>';
-	html+='					<a class="zan1" ifzan="0">';
-	html+='						<em class="wico20 iconpraisedb"></em>';
-	html+='						(<span>6</span>)';
+	html+='		</div>';
+	html+='		<div class="wbdetail">';
+	html+='			<div class="wbinfo">';
+	html+='				<a class="wbname func1">Wing_yk</a>';
+	html+='				<a href="#">';
+	html+='					<i class="wico16 approveco"></i>';
+	html+='				</a>';
+	html+='			</div>';
+	html+='			<div class="wbtext">';
+	html+='			'+ct+'</div>';
+	html+='			<div class="wbfunc clearfix">';
+	html+='				<div class="wbhandle">';
+	html+='					<a class="zan" ifzan="0">';
+	html+='						<em class="wico20 iconpraised"></em>(<span>0</span>)';
 	html+='					</a>';
 	html+='					<i class="txt3">|</i>';
-	html+='					<a class="hh" rindex="1" iso="no">回复</a>';
-	html+='				</span>';
-	html+='			</div>';
-	html+='			<div class="rereply1"></div>';
-	html+='		</dd>';
-	html+='		<dd class="clear"></dd>';
-	html+='	</dl>';	
-	html+=' <dl class="commentlist line1">';
-	html+='		<dt>';
-	html+='			<a href="#">';
-	html+='				<img src="images/p2.jpg">';
-	html+='			</a>';
-	html+='		</dt>';
-	html+='		<dd>';
-	html+='			<a href="#">Sissi</a>：加油!!!!!!!!！ (8月21日 12:32)';
-	html+='			<div class="info">';
-	html+='				<span class="wlinkb">';
-	html+='					<em class="hover">';
-	html+='						<a href="#">举报</a>';
-	html+='						<em class="txt3">|</em>';
-	html+='					</em>';
-	html+='					<a class="zan1" ifzan="0">';
-	html+='						<em class="wico20 iconpraisedb"></em>';
-	html+='						(<span>2</span>)';
-	html+='					</a>';
+	html+='					<a class="zf">转发</a>';
 	html+='					<i class="txt3">|</i>';
-	html+='					<a class="hh" rindex="2">回复</a>';
-	html+='				</span>';
+	html+='					<a href="#">收藏</a>';
+	html+='					<i class="txt3">|</i>';
+	html+='					<a class="pl" pindex="10" isopen="no" ifc="0">评论(0)</a>';
+	html+='				</div>';
+	html+='				<div class="wbfrom">';
+	html+='					<a href="#" class="link2 wbtime">'+t+'</a>';
+	html+='					<em class="txt2">来自</em>';
+	html+='					<a href="#" class="link2">微博桌面</a>';
+	html+='					<span class="hoverr">';
+	html+='						<em class="txt2">|</em>&nbsp;';
+	html+='						<a href="#" class="jubao">举报</a>';
+	html+='					</span>';
+	html+='				</div>';
 	html+='			</div>';
-	html+='			<div class="rereply2"></div>';
-	html+='		</dd>';
-	html+='		<dd class="clear"></dd>';
-	html+='	</dl>';
+	html+='			<div class="dahuifu10"></div>';
+	html+='		</div>';
+	html+='	</div>';
 	html+='</div>';
-	$("#ccru"+x).append(html);
+	$("#gfb").prepend(html);
+}
+
+function zhuanfa(p,r,c){
+	var html="";
+	var curtime=new Date();
+	var hour=curtime.getHours();
+	var min=curtime.getMinutes();
+	var t=hour+":"+min;
+	html+='<div class="wbfeedtype swfun line2">';
+	html+='	<div class="wbscreen">';
+	html+='		<a class="wico12 iconchoose"></a>';
+	html+='	</div>';
+	html+='	<div class="wbfeeddetail line2 clearfix">';
+	html+='		<div class="wbface">';
+	html+='			<a href="#" class="wfaceradius">';
+	html+='				<img src="images/user.jpg">';
+	html+='			</a>';
+	html+='		</div>';
+	html+='		<div class="wbdetail">';
+	html+='			<div class="wbinfo">';
+	html+='				<a class="wbname func1">Wing_yk</a>';
+	html+='				<a href="#">';
+	html+='					<i class="wico16 approveco"></i>';
+	html+='				</a>';
+	html+='			</div>';
+	html+='			<div class="wbtext">'+p+'//转发微博';
+	html+='			</div>';
+	html+='			<div class="wbmediaexpand swfun2 line1 bg1">';
+	html+='				<div class="wbarrow">';
+	html+='					<em class="line1c">◆</em>';
+	html+='					<span class="bg1c">◆</span>';
+	html+='				</div>';
+	html+='				<div class="listcontent">';
+	html+='					<div class="wbinfo">';
+	html+='						<a href="#" class="wbname func3">'+r+'</a>';
+	html+='						<a href="#">';
+	html+='							<i class="wico16 approveco"></i>';
+	html+='						</a>';
+	html+='					</div>';
+	html+='					<div class="wbtext">';
+	html+='						<em>';
+	html+='						'+c+'</em>';
+	html+='					</div>';
+	html+='				</div>';
+	html+='			</div>';
+	html+='			<div class="wbfunc clearfix">';
+	html+='				<div class="wbhandle">';
+	html+='					<a class="zan">';
+	html+='						<em class="wico20 iconpraised"></em>(<span>0</span>)';
+	html+='					</a>';
+	html+='					<i class="txt3">|</i>';
+	html+='					<a class="zf">转发</a>';
+	html+='					<i class="txt3">|</i>';
+	html+='					<a href="#">收藏</a>';
+	html+='					<i class="txt3">|</i>';
+	html+='					<a class="pl" pindex="20" isopen="no" ifc="0">评论(0)</a>';
+	html+='				</div>';
+	html+='				<div class="wbfrom">';
+	html+='					<a href="#" class="link2 wbtime">'+t+'</a>';
+	html+='					<em class="txt2">来自</em>';
+	html+='					<a href="#" class="link2">微博桌面</a>';
+	html+='					<span class="hoverr">';
+	html+='						<em class="txt2">|</em>&nbsp;';
+	html+='						<a href="#" class="jubao">举报</a>';
+	html+='					</span>';
+	html+='				</div>';
+	html+='			</div>';
+	html+='			<div class="dahuifu20"></div>';
+	html+='		</div>';
+	html+='	</div>';
+	html+='</div>';
+	$("#gfb").prepend(html);
 }

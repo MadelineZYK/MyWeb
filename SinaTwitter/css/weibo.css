@@ -9,7 +9,8 @@ legend{margin:0; display: block;-webkit-padding-start: 2px;-webkit-padding-end: 
 textarea{resize:none;}
 p{display: block;-webkit-margin-before: 1em;-webkit-margin-after: 1em;-webkit-margin-start: 0px;-webkit-margin-end: 0px;}
 
-body{color: #333; background-color: #bee1f5;background-image: url("../images/body.png");background-repeat: repeat-x;font: 12px/1.125 Arial,Helvetica,sans-serif;}
+body{color: #333; background-color: #bee1f5;background-image: url("../images/body.png");background-repeat: repeat-x;font: 12px/1.125 Arial,Helvetica,sans-serif;position: relative;}
+.mengban{width: 100%;height: 100%;background-color: #000;position: absolute;opacity: 0.6;display: none;z-index: 9998;}
 #blog{background-repeat: no-repeat;background-position: center 0;padding-top: 60px;background-image: url("../images/bodybg.png");min-width: 980px;display: block;}
 .fb{background-image: url("../images/footer.png");background-position: center bottom;background-repeat: no-repeat;display: block;}
 .gnbg{position: fixed;top: 2px;left: 0;z-index: 9999;width: 100%; height: 41px;background: url("../images/bgline.png") repeat-x center 38px;}
@@ -192,6 +193,20 @@ em{font-style: normal;font-weight: normal;}
 .wbdetail{margin-left: 65px;}
 .wbname{font-size: 14px;font-weight: bold;line-height: 16px;}
 .wbtext{font-size: 14px;line-height: 23px;padding: 4px 0 4px;}
+.wbtext .wbmedialist{padding: 0 0 10px;margin-right: -20px;}
+.wbtext .wbmedialist li{display: inline;margin: 0 9px 0 0;vertical-align: top;}
+.wbtext .lostpicmedia{display: inline-block;vertical-align: top;overflow: hidden;}
+.wbtext .lostpiclist{width: 170px;float: left;margin-left: -5px;font-size: 0;}
+.wbtext .lostpiclist li{float: left;display: inline;width: 80px;height: 80px;margin: 5px 0 0 5px;overflow: hidden;position: relative;}
+.wbtext .lostpiclist li img{width: 80px;height: 80px;}
+.wbtext .wbmedialist li img{cursor: pointer;vertical-align: top;display: inline-block;}
+.bigcursor{cursor: url("../images/big.cur"),auto!important;}
+
+.expand{padding: 0 0 10px;display: none;}
+.piclistview{width: 440px;margin: 0 auto;overflow: hidden;}
+.smallcursor{text-align: center;cursor: url("../images/small.cur"), auto!important;}
+.epli{float: left;width: 440px;text-align: center;display: none;}
+
 .wbhandle{float: right;}
 .wbhandle .wico20{position: relative;}
 .iconpraised{width: 13px;height: 14px;background-position: -75px 0;vertical-align: text-bottom;}
@@ -375,3 +390,17 @@ dd {display: block;-webkit-margin-start: 40px;}
 .wbfeed .repeat .info .txt3{margin: 0 6px 0 8px;}
 .iconpraisedb{width: 13px;height: 14px;background-position: -75px 0;vertical-align: text-bottom;}
 .commentlist .repeat{clear: both;line-height: 20px;padding: 15px 20px 13px;font-size: 12px;margin: 10px 0 6px;border-radius: 3px;border-width: 1px;border-style: solid;zoom: 1;}
+
+/*转发*/
+.contrans{width: 480px;height: 250px;position: absolute;background-color: #fff;border: 1px solid #ccc;border-radius: 2px;display: none;top: 500px;z-index: 9999;}
+.contranstop{width: 440px;height: 30px;padding:0 20px;background: #f2f2f2;}
+.conttxt{color: #333;font-size: 14px;line-height: 30px;font-weight: bold;display: block;float: left;}
+.contclose{width: 16px;height: 16px;background: url("../images/icon.png");background-position: -75px -200px;background-repeat: no-repeat;display: inline-block;float: right;margin-top: 5px;cursor: pointer;}
+.contransbom{width: 450px;height: 180px;margin: 20px auto;}
+.contmyan{width: 425px;height: 50px;padding: 6px 10px;background-color: rgb(242, 242, 242)}
+.conttxtlink{line-height: 18px;padding-right: 5px;font-size: 12px;}
+.contgeyan{display: block; color: rgb(51, 51, 51);font-size: 12px;line-height: 18px;width:425px; white-space:nowrap; text-overflow:ellipsis; overflow: hidden;}
+.conttebox{width: 440px;height: 45px;padding-top: 20px;}
+.contte{width: 440px;height: 45px;border:1px solid rgb(204, 204, 204);background-color: #fff;-webkit-box-shadow: rgb(234, 234, 234) 0px 1px 1px 0px inset;outline: 0px;resize:none;padding-left: 10px; }
+.contbom{padding-top: 10px;width: 440px;height:28px; }
+.concwbrzfbtn{width: 60px;height: 28px;border: 1px solid rgb(255, 155, 1);line-height: 28px;text-align: center;background-image:  -webkit-linear-gradient(top, rgb(255, 184, 71) 0%, rgb(255, 162, 16) 100%);color: #fff;float: right;border-radius: 3px;cursor: pointer;}

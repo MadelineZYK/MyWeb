@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/weibo.js"></script>
 </head>
 <body>
+	<div class="mengban"></div>
 	<div id="blog">
 		<div class="fb">
 			<div id="p1content">
@@ -467,7 +468,7 @@
 													</a>
 												</div>
 												<a href="#" class="wbtnvdisable">
-													<span class="btn30px">发布</span>
+													<span class="btn30px" id="fabu">发布</span>
 												</a>
 											</div>
 
@@ -604,6 +605,7 @@
 									</div>
 
 									<div class="wbfeed">
+										<div id="gfb"></div>
 										<div class="wbfeedtype swfun line2">
 											<div class="wbscreen">
 												<a class="wico12 iconchoose"></a>
@@ -631,7 +633,7 @@
 																<em class="wico20 iconpraised"></em>(<span>3</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发</a>
+															<a class="zf">转发</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
@@ -750,6 +752,33 @@
 														</div>
 
 													</div> -->
+													<!-- 转发 -->
+													<div class="contrans">
+														<div class="contranstop">
+															<span class="conttxt ">转发微博</span>
+															<span class="contclose"></span>
+														</div>
+														<div class="contransbom">
+															<div class="contmyan">
+																<a href="" class="conttxt conttxtlink"></a>
+																<span class="contgeyan"></span>
+															</div>
+															<div class="conttebox">
+																<textarea class="contte"></textarea>
+															</div>
+															<div class="contbom">
+																<div class="concwbrplbleft">
+																	<span class="concwbrplbbq"></span>
+																	<input type="checkbox" class="concwbrplbcheck">
+																	<span class="concwbrplbtxt">同时转发到我的微博                
+																	</span>
+																</div>
+																<div class="concwbrzfbtn">转发</div>
+															</div>
+														</div>
+													</div>
+
+
 												</div>
 											</div>
 										</div>
@@ -969,7 +998,7 @@
 																<em class="wico20 iconpraised"></em>(<span>3</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发(20)</a>
+															<a class="zf">转发(20)</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
@@ -1080,7 +1109,7 @@
 																<em class="wico20 iconpraised"></em>(<span>3</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发</a>
+															<a class="zf">转发</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
@@ -1160,7 +1189,7 @@
 																<em class="wico20 iconpraised"></em>(<span>6</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发</a>
+															<a class="zf">转发</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
@@ -1209,7 +1238,7 @@
 																<em class="wico20 iconpraised"></em>(<span>8</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发</a>
+															<a class="zf">转发</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
@@ -1266,7 +1295,32 @@
 															</div>
 															<div class="wbtext">
 																<em>曹格的女儿和那个韩国小正太好有夫妻相~真是太可爱了！！！
-																	
+																	<ul class="wbmedialist clearfix">
+																		<li>
+																			<div class="lostpicmedia clearfix">
+																				<ul class="lostpiclist clearfix">
+																					<li>
+																						<img src="images/st1.jpg" class="bigcursor" liindex="1">
+																					</li>
+																					<li>
+																						<img src="images/st2.jpg" class="bigcursor" liindex="2">
+																					</li>
+																				</ul>
+																			</div>
+																		</li>
+																	</ul>
+																	<div class="expand">
+																		<div class="piclistview">
+																			<ul class="clearfix smallcursor">
+																				<li class="epli" id="ll1">
+																					<img src="images/dt1.jpg">
+																				</li>
+																				<li class="epli" id="ll2">
+																					<img src="images/dt2.jpg">
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
 																</em>
 															</div>
 														</div>
@@ -1277,7 +1331,7 @@
 																<em class="wico20 iconpraised"></em>(<span>13</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发</a>
+															<a class="zf">转发</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
@@ -1342,7 +1396,7 @@
 																<em class="wico20 iconpraised"></em>(<span>13012</span>)
 															</a>
 															<i class="txt3">|</i>
-															<a href="#">转发(60014)</a>
+															<a class="zf">转发(60014)</a>
 															<i class="txt3">|</i>
 															<a href="#">收藏</a>
 															<i class="txt3">|</i>
