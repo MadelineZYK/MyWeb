@@ -57,6 +57,9 @@ div,a{margin: 0;padding: 0;border: 0;outline: 0;vertical-align: baseline;backgro
 .postauthor{text-transform: uppercase;}
 .list .travel {padding: 15px 0 0 30px;border-bottom: 1px solid #d9d9d9;position: relative;}
 .travel .reserve{font-size: 15px;top:24px;left: 60px;color: #fff;position: absolute;visibility: hidden;}
+.postcontent1{color: #262626;font: 12px/1.5 Helvetica, Arial, sans-serif;}
+.postcontent1 p{margin-bottom: 15px;margin: 10px 0;}
+.postcontent1 a{text-decoration: underline;}
 
 
 .list .travel h2,.list .travel h2 a{color: #000;font-size: 24px;font-weight: normal;text-decoration: none;margin-bottom: 8px;}
