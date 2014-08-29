@@ -1,0 +1,111 @@
+*{margin: 0;padding:0;}
+ul,li{list-style: none;}
+img{border: 0;}
+a{text-decoration: none;color: #333;}
+body{height: 100%;width: 100%;font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;font-size: 12px;}
+input,select{vertical-align: middle;}
+input[type="submit"]{padding:1px 6px;}
+input[type="hidden"]{display: none;}
+input,select{vertical-align: middle;}
+input[type="checkbox"]{cursor: pointer;width: 16px;height: 16px;margin: 0;}
+
+#main{height: 100%;width: 100%;min-width: 930px;min-height: 500px;position: relative;transition-property: all;transition-duration: .2s;}
+#top{height: 56px;width: 100%;position: absolute;top: 0;background: url("../images/topbg.png") repeat 0 0;}
+#jheader{height: 100%;width: 100%;position: relative;}
+.logo{float: left;height: 100%;width: 184px;padding-left: 16px;}
+.logo h1{width: 162px;height: 100%;background: url("../images/lo.png") no-repeat 0 50%;font-size: 0;line-height: 0;overflow: hidden;}
+.logo h1 a{display: block;width: 100%;height: 100%;text-indent: -999px;}
+.searchwrap{position: absolute;left: 240px;width: 230px;height: 30px;top: 13px;background: url("../images/search.png") no-repeat 0 0;}
+.searchcontent{padding-left: 30px;position: relative;}
+#jsearchstatus{border: 0 none;cursor: pointer;background-color: red;width: 30px;height: 30px;display: block;overflow: hidden;position: absolute;font-size: 0;left: 0;top: 0;text-indent: 150%;outline: 0;background: url("../images/submit.png") no-repeat 10px 50%;}
+.searchinput{width: 200px;}
+#jsearchinput{border: 0 none;background-color: transparent;height: 24px;width: 180px;padding: 3px;outline: 0;color: #fff;font-family: "Hiragino Sans GB","Microsoft Yahei",SimHei,SimSun;}
+.mainnav{position: relative; cursor: pointer;width: 270px;height: 56px;font-size: 12px;font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei",Helvetica,Arial,sans-serif;float: right;}
+.tiplogin{position: absolute;top: 0;left: 0;overflow: hidden;width: 148px;padding: 16px 15px 15px 33px;line-height: 25px;font-size: 14px;color: #fff;white-space: nowrap;background: url("../images/common.png") repeat -200px -210px;text-align: center;}
+.tiplogin a{font-size: 14px;padding: 0 5px;text-decoration: none;color: #f60;text-align: center;}
+.enterbutton{position: relative;overflow: hidden;float: right;width: 73px;height: 56px;text-align: center;background: url("../images/common.png") repeat -398px -210px;}
+.avatar{position: absolute;left: 17px;top: 10px;width: 34px;height: 34px;border: 2px solid #fff;border-radius: 50%;}
+.seiyabtn{display: inline-block;overflow: hidden;height: 20px;padding: 5px;line-height: 20px;text-align: center;text-decoration: none;color: #fff;}
+.btnenter{position: absolute;left: 0;top: 0;width: 73px;height: 56px;padding: 0;margin: 0;background: url("../images/common.png") no-repeat 0 -150px;}
+.btnenter span{display: none;}
+
+#middle{width: 100%;position: absolute;top: 56px;bottom: 80px;background-color: #fff;}
+.mainwrap{height: 100%;padding-left: 240px;padding-right: 310px;position: relative;}
+.mainsidebar{width: 190px;padding: 0 10px;height: 100%;position: absolute;top: 0;left: 0;}
+.menuouter{padding-top: 10px;padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+.menuouter ul li{height: 36px;}
+.menuouter ul .current a{background-color: #f0f0f0;}
+.menuouter ul li a{font-size: 12px; display: block;height: 36px;line-height: 36px;padding-left: 36px;cursor: pointer;border-radius: 4px;position: relative;color: #333;text-decoration: none;-webkit-transition: .3s ease;-webkit-transition-property: background-color;}
+.menuouter ul li i{position: absolute;top: 9px;left: 9px;width: 18px;height: 18px;background-image: url("../images/lefticon.png");background-repeat: no-repeat;}
+.menuouter ul li .iconplay{background: url("../images/leftli.gif") no-repeat 0 0 !important;}
+.iconhistory{background-position: 0 -376px;}
+.iconmyfav{background-position: 0 -394px;}
+.collectouter{padding-top: 10px;}
+.collecttitle{height: 30px;line-height: 30px;position: relative;}
+.collecttitle h3{color: #aaa;font-size: 12px;}
+.collecttitle span{position: absolute;right: 0;top: 6px;}
+.collecttitle a{display: block;width: 18px;height: 18px;cursor: pointer;}
+.iconaddcollect{background-position: 0 -412px;background-image: url("../images/lefticon.png");background-repeat: no-repeat;}
+.collectlist{position: absolute;bottom: 10px;top: 169px;width: 190px;overflow: hidden;}
+#jcollectscrollview{height: 100%;}
+.ksscrollview{overflow: hidden;position: relative;cursor: default;outline: 0;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-drag: none;}
+.ksscrollviewcontent{position: absolute;left: 0;top: 0;min-height: 100%;min-width: 100%;width: 100%;-webkit-user-drag: none;}
+.collectnone{width: 185px;height: 89px;margin: 0 auto;background: url("../images/lb.png") no-repeat 0 0;}
+
+.mainbody{height: 100%;}
+.mainpage{height: 100%;position: relative;}
+.uiplaylistheader{height: 36px;line-height: 36px;padding-top: 9px;border-bottom: 1px solid #ccc;color: #aaa;position: absolute;top: 0;}
+.uirowitem{width: 100%;position: relative;}
+.uirowitembody{padding-left: 72px;padding-right: 110px;overflow: hidden;-webkit-user-select: none;}
+.uirowitemcolumn{float: left;width: 33%;padding-right: .2%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.uiplaylistbody{background: url("../images/listbg.png") repeat 0 0;width: 100%;position: absolute;top: 46px;bottom: 60px;}
+#jtracksscrollview{height: 100%;}
+.ksscrollview{overflow: hidden;position: relative;cursor: default;outline: 0;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-drag: none;}
+.ksscrollviewcontent{position: absolute;left: 0;top: 0;min-height: 100%;min-width: 100%;width: 100%;-webkit-user-drag: none;}
+.uirowitem{width: 100%;position: relative;}
+.uitrackitem{background-color: #fff;-webkit-user-select: none;-webkit-transition: .3s ease;-webkit-transition-property: background-color;}
+.uitrackcurrent{background-color: #f0f0f0;}
+.uitrackmain{border-bottom: 1px solid #ebebeb;height: 40px;line-height: 41px;color: #333;}
+.uitrackcheckbox{position: absolute;left: 0;height: 16px;padding: 12px 0;padding-left: 10px;padding-right: 5px;line-height: 0;}
+#jtab input[type="checkbox"]{background-image: url("../images/lefticon.png");background-repeat: no-repeat;background-position: -1px -710px;}
+.uitracksort{position: absolute;width: 36px;height: 41px;left: 31px;top: 0;text-align: center;}
+.uitracksort em{font-style: normal;font-family: Arial;color: #aaa;}
+.uirowitembody{padding-left: 72px;padding-right: 110px;overflow: hidden;-webkit-user-select: none;}
+.uirowitemcolumn{float: left;width: 33%;padding-right: .2%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.uitrackcontrol{position: absolute;top: 0;right: 0;width: 110px;height: 40px;}
+.uitrackcontrol a{background-image: url("../images/lefticon.png");background-repeat: no-repeat;display: block;position: absolute;top: 11px;cursor: pointer;}
+.uitrackcontrol .icontrackfav{background-position: -28px -130px;width: 18px;height: 18px;right: 86px;}
+.uitrackcontrol .icontrackmore{right: 53px;display: none;background-position: 0 -473px;width: 18px;height: 18px;}
+.uitrackcontrol .icontrackdelete{right: 20px;display: none;background-position: 0 -491px;width: 18px;height: 18px;}
+.uiroamwrap{display: none;padding-left: 31px;padding-right: 36px;}
+.uiroamhead{padding-left: 41px;height: 41px;}
+.uiroamopen{background: url("../images/my.png") no-repeat 0 0;display: block;width: 88px;height: 30px;line-height: 30px;padding-left: 30px;color: #fff;text-align: center;cursor: pointer;}
+.uiplaylistfooter{border-top: 1px solid #ccc;height: 45px;width: 100%;position: absolute;bottom: 0;padding-top: 14px;}
+.uitrackall{height: 30px;width: 100%;line-height: 30px;position: relative;padding-left: 38px;}
+.uiallcheckbox{position: absolute;left: 0;height: 16px;padding-top: 7px;padding-bottom: 7px;padding-left: 10px;padding-right: 10px;line-height: 0;}
+.uiallitem{float: left;height: 30px;padding-right: 10px;}
+.uiallitem a{display: block;text-indent: 38px;cursor: pointer;color: #333;text-decoration: none;}
+.icontracksdelete,.icontracksfav,.icontracksadd,.icontracksmore{background-image: url("../images/cc.png");background-repeat: no-repeat;width: 73px;height: 30px;}
+.icontracksdelete{background-position: 0 0;}
+.icontracksfav{background-position: -150px 0;}
+.icontracksadd{background-position: -225px 0;width: 120px;}
+.icontracksmore{background-position: -348px 0;}
+
+.mainouther{width: 250px;padding-right: 20px;height: 100%;position: absolute;right: 0;top: 0;}
+.uialbumcover{height: 185px;width: 250px;padding-top: 20px;}
+.uialbumimg{width: 250px;height: 185px;display: table-cell;vertical-align: middle;text-align: center;}
+.uialbumimg img{max-height: 100%;max-width: 100%;}
+.uialbumsale{height: 42px;padding: 5px 0;}
+.uialbumsale .none{display: block;width: 130px;height: 40px;overflow: hidden;padding-left: 40px;text-indent: -900px;border-radius: 4px;border: 1px solid #e0e0e0;text-decoration: none;margin: 0 auto;background: #ff7b00 url("../images/r.gif") no-repeat 50% 50%;font-size: 0;color: #fff;text-align: center;}
+.uiplayerlrc{position: absolute;top: 215px;bottom: 0;width: 250px;}
+#jlyricscrollview{height: 100%;}
+.ksscrollview{overflow: hidden;position: relative;cursor: default;outline: 0;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-user-drag: none;}
+.ksscrollbar{z-index: 9;position: absolute;}
+.ksscrollbary{right: 0;height: 100%;width: 8px;}
+.ksscrollbaryarrowup,.ksscrollbaryarrowdown{display: none;}
+.ksscrollbarytrack{position: absolute;right: 0;top: 0;bottom: 0;width: 8px;}
+.ksscrollbarydrag{position: absolute;
+background: #ccc;
+border-radius: 4px;
+opacity: .5;height: 20px;
+transform: translateX(0px) translateY(27.536104114189758px) translateZ(0px);}

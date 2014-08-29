@@ -1,0 +1,294 @@
+<html>
+<head>
+	<title>虾米音乐网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/xiami.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/xiami.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="top">
+			<div id="jheader">
+				<div class="logo">
+					<h1>
+						<a href="#">虾米音乐</a>
+					</h1>
+				</div>
+				<div class="searchwrap">
+					<div class="searchcontent">
+						<form id="search">
+							<input id="jsearchstatus" type="submit">
+							<input type="hidden" name="pos" value="1">
+							<div class="searchinput">
+								<input id="jsearchinput" type="text">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="mainnav">
+					<div class="tiplogin">马上
+						<a href="#">登录</a>
+					</div>
+					<div class="enterbutton">
+						<div class="avatar">
+							<img src="images/ava.png">
+						</div>
+						<a href="#" class="seiyabtn btnenter">
+							<span>进入播间</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="middle">
+			<div id="jmainwrap" class="mainwrap">
+				<div class="mainsidebar">
+					<div class="menuouter">
+						<ul id="jsidebarmenu">
+							<li class="current" id="jmenuplaying">
+								<a>
+									<i class="iconplay"></i>正在播放
+								</a>
+							</li>
+							<li id="jmenuhistory">
+								<a>
+									<i class="iconhistory"></i>播放历史
+								</a>
+							</li>
+							<li id="jmenumyfav">
+								<a>
+									<i class="iconmyfav"></i>我收藏的单曲
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="collectouter">
+						<div class="collecttitle">
+							<h3>我创建的精选集</h3>
+							<span>
+								<a class="iconaddcollect" id="jcreatecollect"></a>
+							</span>
+						</div>
+					</div>
+					<div class="collectlist">
+						<div id="jcollectscrollview" class="ksscrollview">
+							<div class="ksscrollviewcontent" id="jcollectlist">
+								<div class="collectnone"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="jtab" class="mainbody">
+					<div id="jpageplaylist" class="mainpage">
+						<div class="uiplaylistheader uirowitem">
+							<div class="uirowitembody">
+								<div class="uirowitemcolumn c1">歌曲
+									<span id="jtrackcount">(3)</span>
+								</div>
+								<div class="uirowitemcolumn c2">演唱者</div>
+								<div class="uirowitemcolumn c3">专辑</div>
+							</div>
+						</div>
+						<div class="uiplaylistbody">
+							<div id="jtracksscrollview" class="ksscrollview">
+								<div class="ksscrollviewcontent">
+									<div class="uitrackswrap" id="jplaytrackslist">
+										<div class="uirowitem uitrackitem uitrackcurrent">
+											<div class="uitrackmain">
+												<div class="uitrackcheckbox">
+													<input type="checkbox" class="uitrackitemid">
+												</div>
+												<div class="uitracksort">
+													<em>1</em>
+												</div>
+												<div class="uirowitembody">
+													<div class="uirowitemcolumn c1">
+														<span>Let It Go</span>
+													</div>
+													<div class="uirowitemcolumn c2">
+														<a href="#">Demi Lovato</a>
+													</div>
+													<div class="uirowitemcolumn c3">
+														<a href="#">Let It Go</a>
+													</div>
+												</div>
+												<div class="uitrackcontrol">
+													<a class="favbtn icontrackfav"></a>
+													<a class="morebtn icontrackmore"></a>
+													<a class="delebtn icontrackdelete"></a>
+												</div>
+											</div>
+											<div class="uiroamwrap">
+												<div class="uiroamhead">
+													<a class="uiroamopen">漫游相似歌曲</a>
+												</div>
+											</div>
+										</div>
+										<div class="uirowitem uitrackitem">
+											<div class="uitrackmain">
+												<div class="uitrackcheckbox">
+													<input type="checkbox" class="uitrackitemid">
+												</div>
+												<div class="uitracksort">
+													<em>2</em>
+												</div>
+												<div class="uirowitembody">
+													<div class="uirowitemcolumn c1">
+														<span>艳火</span>
+													</div>
+													<div class="uirowitemcolumn c2">
+														<a href="#">张悬</a>
+													</div>
+													<div class="uirowitemcolumn c3">
+														<a href="#">神的游戏</a>
+													</div>
+												</div>
+												<div class="uitrackcontrol">
+													<a class="favbtn icontrackfav"></a>
+													<a class="morebtn icontrackmore"></a>
+													<a class="delebtn icontrackdelete"></a>
+												</div>
+											</div>
+											<div class="uiroamwrap">
+												<div class="uiroamhead">
+													<a class="uiroamopen">漫游相似歌曲</a>
+												</div>
+											</div>
+										</div>
+										<div class="uirowitem uitrackitem">
+											<div class="uitrackmain">
+												<div class="uitrackcheckbox">
+													<input type="checkbox" class="uitrackitemid">
+												</div>
+												<div class="uitracksort">
+													<em>3</em>
+												</div>
+												<div class="uirowitembody">
+													<div class="uirowitemcolumn c1">
+														<span>平凡之路</span>
+													</div>
+													<div class="uirowitemcolumn c2">
+														<a href="#">朴树</a>
+													</div>
+													<div class="uirowitemcolumn c3">
+														<a href="#">平凡之路</a>
+													</div>
+												</div>
+												<div class="uitrackcontrol">
+													<a class="favbtn icontrackfav"></a>
+													<a class="morebtn icontrackmore"></a>
+													<a class="delebtn icontrackdelete"></a>
+												</div>
+											</div>
+											<div class="uiroamwrap">
+												<div class="uiroamhead">
+													<a class="uiroamopen">漫游相似歌曲</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="uiplaylistfooter">
+							<div class="uitrackall">
+								<div class="uiallcheckbox">
+									<input id="jcheckalltrack" type="checkbox">
+								</div>
+								<div class="uiallitem">
+									<a class="icontracksdelete" id="jtracklistdeletet">删除</a>
+								</div>
+								<div class="uiallitem">
+									<a class="icontracksfav" id="jtracklistfav">收藏</a>
+								</div>
+								<div class="uiallitem">
+									<a class="icontracksadd" id="jtracklistadd">添加到精选集</a>
+								</div>
+								<div class="uiallitem">
+									<a class="icontracksmore" id="jtracklistmore">更多</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="jlrcwrap" class="mainouther">
+					<div class="uialbumcover" id="jalbumcover">
+						<div id="jplayercover" class="uialbumimg">
+								<a href="#">
+									<img src="images/t1.jpg">
+								</a>
+						</div>
+					</div>
+					<div class="uialbumsale" id="jalbumsale">
+						<a href="#" class="none">去音乐馆淘一下</a>
+					</div>
+					<div class="uiplayerlrc" id="jlyricscrollwrap">
+						<div id="jlyricscrollview" class="ksscrollview">
+							<div id="kscomponent947" class="ksscrollbar ksscrollbary">
+								<div class="ksscrollbaryarrowup">
+									<a href="#">up</a>
+								</div>
+								<div class="ksscrollbaryarrowdown">
+									<a href="#">down</a>
+								</div>
+								<div class="ksscrollbarytrack">
+									<div class="ksscrollbarydrag">
+										<div class="ksscrollbarydragtop"></div>
+										<div class="ksscrollbarydragcenter"></div>
+										<div class="ksscrollbarydragbottom"></div>
+									</div>
+								</div>
+							</div>
+							<div class="ksscrollviewcontent">
+								<div class="uiplayerlrcwrap">
+									<ul>
+										<li class="uilrcline">Let it go, let it go</li>
+										<li class="uilrcline">Can't hold it back anymore</li>
+										<li class="uilrcline">Let it go, let it go</li>
+										<li class="uilrcline">Turn my back and slam the door</li>
+										<li class="uilrcline">&nbsp;</li>
+										<li class="uilrcline">The snow blows white on the mountain tonight</li>
+										<li class="uilrcline">Not a footprint to be seen</li>
+										<li class="uilrcline">A kingdom of isolation </li>
+										<li class="uilrcline">and it looks like I'm the Queen</li>
+										<li class="uilrcline">&nbsp;</li>
+										<li class="uilrcline">The wind is howling </li>
+										<li class="uilrcline">like the swirling storm inside</li>
+										<li class="uilrcline">Couldn't keep it in, </li>
+										<li class="uilrcline">Heaven knows I tried</li>
+										<li class="uilrcline">&nbsp;</li>
+										<li class="uilrcline">Don't let them in, don't let them see</li>
+										<li class="uilrcline">Be the good girl you always have to be</li>
+										<li class="uilrcline">Conceal, don't feel</li>
+										<li class="uilrcline">Don't let them know</li>
+										<li class="uilrcline">Well, now they know</li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+										<li class="uilrcline"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="bottom"></div>
+	</div>
+</body>
+</html>
