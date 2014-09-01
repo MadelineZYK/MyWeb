@@ -8,6 +8,7 @@ input[type="submit"]{padding:1px 6px;}
 input[type="hidden"]{display: none;}
 input,select{vertical-align: middle;}
 input[type="checkbox"]{cursor: pointer;width: 16px;height: 16px;margin: 0;}
+a:hover{text-decoration: underline;}
 
 #main{height: 100%;width: 100%;min-width: 930px;min-height: 500px;position: relative;transition-property: all;transition-duration: .2s;}
 #top{height: 56px;width: 100%;position: absolute;top: 0;background: url("../images/topbg.png") repeat 0 0;}
@@ -37,7 +38,7 @@ input[type="checkbox"]{cursor: pointer;width: 16px;height: 16px;margin: 0;}
 .menuouter ul .current a{background-color: #f0f0f0;}
 .menuouter ul li a{font-size: 12px; display: block;height: 36px;line-height: 36px;padding-left: 36px;cursor: pointer;border-radius: 4px;position: relative;color: #333;text-decoration: none;-webkit-transition: .3s ease;-webkit-transition-property: background-color;}
 .menuouter ul li i{position: absolute;top: 9px;left: 9px;width: 18px;height: 18px;background-image: url("../images/lefticon.png");background-repeat: no-repeat;}
-.menuouter ul li .iconplay{background: url("../images/leftli.gif") no-repeat 0 0 !important;}
+.menuouter ul li .iconplay{background: url("../images/lefticon.png") no-repeat 0 -358px !important;}
 .iconhistory{background-position: 0 -376px;}
 .iconmyfav{background-position: 0 -394px;}
 .collectouter{padding-top: 10px;}
@@ -64,12 +65,15 @@ input[type="checkbox"]{cursor: pointer;width: 16px;height: 16px;margin: 0;}
 .ksscrollviewcontent{position: absolute;left: 0;top: 0;min-height: 100%;min-width: 100%;width: 100%;-webkit-user-drag: none;}
 .uirowitem{width: 100%;position: relative;}
 .uitrackitem{background-color: #fff;-webkit-user-select: none;-webkit-transition: .3s ease;-webkit-transition-property: background-color;}
+
 .uitrackcurrent{background-color: #f0f0f0;}
 .uitrackmain{border-bottom: 1px solid #ebebeb;height: 40px;line-height: 41px;color: #333;}
 .uitrackcheckbox{position: absolute;left: 0;height: 16px;padding: 12px 0;padding-left: 10px;padding-right: 5px;line-height: 0;}
-#jtab input[type="checkbox"]{background-image: url("../images/lefticon.png");background-repeat: no-repeat;background-position: -1px -710px;}
+#jtab input[type="checkbox"]{background-image: url("../images/lefticon.png");background-repeat: no-repeat;-webkit-appearance: none;background-position: -1px -710px;}
 .uitracksort{position: absolute;width: 36px;height: 41px;left: 31px;top: 0;text-align: center;}
 .uitracksort em{font-style: normal;font-family: Arial;color: #aaa;}
+.hem:hover{background-position: 0 -18px;}
+.hem{background: url("../images/play.png") no-repeat 0 0;cursor: pointer;display: block;width: 18px;height: 18px;margin: 11px 9px;overflow: hidden;}
 .uirowitembody{padding-left: 72px;padding-right: 110px;overflow: hidden;-webkit-user-select: none;}
 .uirowitemcolumn{float: left;width: 33%;padding-right: .2%;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 .uitrackcontrol{position: absolute;top: 0;right: 0;width: 110px;height: 40px;}
@@ -104,8 +108,65 @@ input[type="checkbox"]{cursor: pointer;width: 16px;height: 16px;margin: 0;}
 .ksscrollbary{right: 0;height: 100%;width: 8px;}
 .ksscrollbaryarrowup,.ksscrollbaryarrowdown{display: none;}
 .ksscrollbarytrack{position: absolute;right: 0;top: 0;bottom: 0;width: 8px;}
-.ksscrollbarydrag{position: absolute;
-background: #ccc;
-border-radius: 4px;
-opacity: .5;height: 20px;
-transform: translateX(0px) translateY(27.536104114189758px) translateZ(0px);}
+.ksscrollbarydrag{position: absolute;background: #ccc;border-radius: 4px;opacity: .5;height: 20px;transform: translateX(0px) translateY(27.536104114189758px) translateZ(0px);width: 8px;}
+.ksscrollviewcontent{translateX(0px) translateY(-30px) translateZ(0px);position: absolute;left: 0;top: 0;min-height: 100%;min-width: 100%;width: 100%;-webkit-user-drag: none;}
+.uiplayerlrc ul li{color: #333;line-height: 22px;text-align: center;padding: 3px 10px;}
+
+#bottom{height: 80px;width: 100%;position: absolute;bottom: 0;background: url("../images/bottom.png") repeat 0 0;}
+#jplayerwrap{height: 100%;position: relative;padding-left: 278px;padding-right: 330px;}
+.playerinfo{height: 100%;position: relative;-webkit-user-select: text;}
+.trackinfo{position: absolute;top: 20px;height: 18px;line-height: 18px;width: 100%;color: #fff;}
+.playertrackinfo{text-overflow: ellipsis;white-space: nowrap;overflow: hidden;padding-right: 100px;font-size: 14px;}
+.playertrackinfo a{color: #fff;text-decoration: none;}
+.trackcontrols{position: absolute;top: 0;right: 0;width: 100px;height: 18px;}
+.iconfav,.iconshare,.iconmore,.playerdot,.prevbtn,.playbtn,.nextbtn,.modeorder,.volumeon,.volumedot{background-image: url("../images/lefticon.png");background-repeat: no-repeat;}
+#jtrackfav{position: absolute;right: 66px;top: 0;cursor: pointer;}
+.iconfav{background-position: 0 -241px;width: 18px;height: 18px;}
+#jtrackshare{position: absolute;right: 33px;top: 0;cursor: pointer;}
+.iconshare{background-position: 0 -259px;width: 18px;height: 18px;}
+#jtrackmore{position: absolute;right: 0;top: 0;cursor: pointer;}
+.iconmore{background-position: 0 -277px;width: 18px;height: 18px;}
+.playerlength{position: absolute;top: 43px;font-size: 10px;width: 100%;height: 20px;}
+.playerposition{position: absolute;line-height: 18px;left: 0;color: #fff;width: 40px;opacity: .3;}
+.playerprogress{position: absolute;height: 18px;left: 40px;right: 40px;}
+.progress{position: absolute;top: 0;width: 100%;height: 100%;background: url("../images/pro.png") repeat-x 0 50%;}
+.loading{position: absolute;top: 0;left: 0;height: 100%;background: url("../images/pro.png") repeat-x 0 50%;width: 100%;}
+.playing{position: absolute;top: 0;left: 0;height: 100%;background: url("../images/pro.png") repeat-x 0 50%;width: 4.557880483380599%;}
+.panel{position: absolute;top: 0;left: 0;width: 100%;height: 100%;cursor: pointer;}
+.playerdot{position: absolute;top: 0;cursor: pointer;margin-left: -4px;left:0;background-position: -32px -338px;width: 18px;height: 18px;}
+.playerduration{position: absolute;line-height: 18px;right: 0;color: #fff;width: 40px;text-align: right;opacity: .3;}
+.playercontrols{width: 278px;height: 100%;position: absolute;top: 0;left: 0;}
+.prevbtn{top: 25px;left: 38px;background-position: 0 -90px;}
+.prevbtn,.playbtn,.nextbtn{display: block;width: 30px;height: 30px;position: absolute;cursor: pointer;}
+.playbtn{top: 25px;left: 91px;background-position: 0 0;}
+.nextbtn{top: 25px;left: 144px;background-position: 0 -60px;}
+.playermode{position: absolute;top: 31px;left: 202px;width: 20px;text-align: right;}
+.playermode .modeorder{display: block;width: 20px;height: 18px;cursor: pointer;background-position: 0 -181px;}
+.playervolume{width: 270px;height: 100%;position: absolute;right: 0;top: 0;}
+#jplayerhq{width: 80px;height: 32px;display: block;position: absolute;top: 28px;right: 176px;cursor: pointer;background-image: url("../images/gp.png");background-repeat: no-repeat;background-position: 0 0;}
+#volume{position: absolute;top: 31px;right: 40px;width: 110px;height: 18px;}
+.volumeon{position: absolute;cursor: pointer;left: 0;background-position: 0 -295px;width: 18px;height: 18px;}
+.volumewrap{position: absolute;left: 24px;width: 80px;height: 18px;}
+.volumepanel{width: 100%;position: absolute;left: 0;top: 0;background: url("../images/pro.png") repeat-x 0 50%;height: 100%;}
+.volumecur{width: 50%;transition-duration: .3s;position: absolute;left: 0;background: url("../images/pro.png") repeat-x 0 50%;height: 100%;}
+.volumecontrol{width: 100%;height: 100%;position: absolute;left: 0;top: 0;cursor: pointer;}
+.volumedot{left: 36px;transition-property: left;-webkit-transition-duration: .3s;transition-duration: .3s;position: absolute;top: 0;background-position: -32px -338px;width: 18px;height: 18px;}
+
+#lyr{width: 250px;height: 140px;margin: 0 20px 0 0;line-height: 25px;font-size: 12px;text-align: center;padding-top: 60px;font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft Yahei', Helvetica, Arial, sans-serif;color: #333;overflow: hidden;}
+
+.blur{width: 100%;height: 100%;position: fixed;top: 0;left: 0;right: 0;bottom: 0;z-index: 0;overflow: hidden;}
+@-webkit-keyframes fadeIn
+{
+	0%{opacity: 0;}
+	10%{opacity: 0.1;}
+	20%{opacity: 0.2;}
+	30%{opacity: 0.3;}
+	40%{opacity: 0.4;}
+	50%{opacity: 0.5;}
+	60%{opacity: 0.6;}
+	70%{opacity: 0.7;}
+	80%{opacity: 0.8;}
+	90%{opacity: 0.9;}
+	100%{opacity: 1;}
+}
+#myCanvas{width: 1366px;height: 700px;-webkit-animation:fadeIn 0.7s 0.1s ease both;opacity: 0;}

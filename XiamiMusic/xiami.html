@@ -8,6 +8,12 @@
 </head>
 <body>
 	<div id="main">
+		<audio id="audio" src="mp3/1.mp3"></audio>
+
+		<div class="blur">
+			<canvas id="myCanvas"></canvas><!-- 模糊画布 -->
+		</div>
+
 		<div id="top">
 			<div id="jheader">
 				<div class="logo">
@@ -98,10 +104,10 @@
 										<div class="uirowitem uitrackitem uitrackcurrent">
 											<div class="uitrackmain">
 												<div class="uitrackcheckbox">
-													<input type="checkbox" class="uitrackitemid">
+													<input type="checkbox" class="uitrackitemid" select="0">
 												</div>
 												<div class="uitracksort">
-													<em>1</em>
+													<em songindex="1">1</em>
 												</div>
 												<div class="uirowitembody">
 													<div class="uirowitemcolumn c1">
@@ -129,10 +135,10 @@
 										<div class="uirowitem uitrackitem">
 											<div class="uitrackmain">
 												<div class="uitrackcheckbox">
-													<input type="checkbox" class="uitrackitemid">
+													<input type="checkbox" class="uitrackitemid" select="0">
 												</div>
 												<div class="uitracksort">
-													<em>2</em>
+													<em songindex="2">2</em>
 												</div>
 												<div class="uirowitembody">
 													<div class="uirowitemcolumn c1">
@@ -160,10 +166,10 @@
 										<div class="uirowitem uitrackitem">
 											<div class="uitrackmain">
 												<div class="uitrackcheckbox">
-													<input type="checkbox" class="uitrackitemid">
+													<input type="checkbox" class="uitrackitemid" select="0">
 												</div>
 												<div class="uitracksort">
-													<em>3</em>
+													<em songindex="3">3</em>
 												</div>
 												<div class="uirowitembody">
 													<div class="uirowitemcolumn c1">
@@ -195,7 +201,7 @@
 						<div class="uiplaylistfooter">
 							<div class="uitrackall">
 								<div class="uiallcheckbox">
-									<input id="jcheckalltrack" type="checkbox">
+									<input id="jcheckalltrack" type="checkbox" select="0">
 								</div>
 								<div class="uiallitem">
 									<a class="icontracksdelete" id="jtracklistdeletet">删除</a>
@@ -217,14 +223,15 @@
 					<div class="uialbumcover" id="jalbumcover">
 						<div id="jplayercover" class="uialbumimg">
 								<a href="#">
-									<img src="images/t1.jpg">
+									<img src="images/t1.jpg" id="canvaspic">
 								</a>
 						</div>
 					</div>
 					<div class="uialbumsale" id="jalbumsale">
 						<a href="#" class="none">去音乐馆淘一下</a>
 					</div>
-					<div class="uiplayerlrc" id="jlyricscrollwrap">
+					<div id="lyr"><!-- 歌词部分 --></div>
+					<!-- <div class="uiplayerlrc" id="jlyricscrollwrap">
 						<div id="jlyricscrollview" class="ksscrollview">
 							<div id="kscomponent947" class="ksscrollbar ksscrollbary">
 								<div class="ksscrollbaryarrowup">
@@ -242,45 +249,60 @@
 								</div>
 							</div>
 							<div class="ksscrollviewcontent">
-								<div class="uiplayerlrcwrap">
-									<ul>
-										<li class="uilrcline">Let it go, let it go</li>
-										<li class="uilrcline">Can't hold it back anymore</li>
-										<li class="uilrcline">Let it go, let it go</li>
-										<li class="uilrcline">Turn my back and slam the door</li>
-										<li class="uilrcline">&nbsp;</li>
-										<li class="uilrcline">The snow blows white on the mountain tonight</li>
-										<li class="uilrcline">Not a footprint to be seen</li>
-										<li class="uilrcline">A kingdom of isolation </li>
-										<li class="uilrcline">and it looks like I'm the Queen</li>
-										<li class="uilrcline">&nbsp;</li>
-										<li class="uilrcline">The wind is howling </li>
-										<li class="uilrcline">like the swirling storm inside</li>
-										<li class="uilrcline">Couldn't keep it in, </li>
-										<li class="uilrcline">Heaven knows I tried</li>
-										<li class="uilrcline">&nbsp;</li>
-										<li class="uilrcline">Don't let them in, don't let them see</li>
-										<li class="uilrcline">Be the good girl you always have to be</li>
-										<li class="uilrcline">Conceal, don't feel</li>
-										<li class="uilrcline">Don't let them know</li>
-										<li class="uilrcline">Well, now they know</li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-										<li class="uilrcline"></li>
-									</ul>
-								</div>
+								
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<div id="bottom">
+			<div id="jplayerwrap">
+				<div class="playerinfo">
+					<div class="trackinfo">
+						<div id="jtrackinfo" class="playertrackinfo">
+							<a href="#" id="jtrackname">Let It Go</a> - 
+							<a href="#">Demi Lovato</a>
+						</div>
+						<div class="trackcontrols">
+							<a id="jtrackfav" class="iconfav"></a>
+							<a id="jtrackshare" class="iconshare"></a>
+							<a id="jtrackmore" class="iconmore"></a>
+						</div>
+					</div>
+					<div class="playerlength">
+						<div class="playerposition" id="jpositiontime"><!-- 当前已播放时间 --></div>
+						<div class="playerprogress">
+							<div class="progress" id="jplayerprogress">
+								<div class="loading"></div>
+								<div class="playing"></div>
+							</div>
+							<div class="panel" id="jplayerpanel">
+								<a class="playerdot" id="jplayerdot"></a>
+							</div>
+						</div>
+						<div class="playerduration" id="jdurationtime"><!-- 歌曲总时间 --></div>
+					</div>
+				</div>
+				<div class="playercontrols">
+					<a id="jprevbtn" class="prevbtn"></a>
+					<a id="jplaybtn" class="playbtn" isplay="0"></a>
+					<a id="jnextbtn" class="nextbtn"></a>
+					<div class="playermode">
+						<a id="jplayermode" class="modeorder"></a>
+					</div>
+				</div>
+				<div class="playervolume">
+					<a id="jplayerhq" class="modehqon1"></a>
+					<div id="volume">
+						<div id="jvolumespeaker" class="volumeon"></div>
+						<div class="volumewrap" id="jvolumerange">
+							<div class="volumepanel">
+								<div class="volumecur"></div>
+							</div>
+							<div class="volumecontrol">
+								<a class="volumedot"></a>
 							</div>
 						</div>
 					</div>
@@ -288,7 +310,6 @@
 			</div>
 		</div>
 
-		<div id="bottom"></div>
 	</div>
 </body>
 </html>
