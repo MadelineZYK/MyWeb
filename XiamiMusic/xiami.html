@@ -4,7 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/xiami.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/mousewheel.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
 	<script type="text/javascript" src="js/xiami.js"></script>
+
 </head>
 <body>
 	<div id="main">
@@ -55,17 +60,17 @@
 						<ul id="jsidebarmenu">
 							<li class="current" id="jmenuplaying">
 								<a>
-									<i class="iconplay"></i>正在播放
+									<i class="menuouteri iconplay"></i>正在播放
 								</a>
 							</li>
 							<li id="jmenuhistory">
 								<a>
-									<i class="iconhistory"></i>播放历史
+									<i class="menuouteri iconhistory"></i>播放历史
 								</a>
 							</li>
 							<li id="jmenumyfav">
 								<a>
-									<i class="iconmyfav"></i>我收藏的单曲
+									<i class="menuouteri iconmyfav"></i>我收藏的单曲
 								</a>
 							</li>
 						</ul>
@@ -125,6 +130,11 @@
 													<a class="morebtn icontrackmore"></a>
 													<a class="delebtn icontrackdelete"></a>
 												</div>
+												<div class="uitrackcontrol1">
+													<a class="favbtn1 icontrackfav1"></a>
+													<a class="morebtn1 icontrackmore1"></a>
+													<a class="delebtn1 icontrackdelete1"></a>
+												</div>
 											</div>
 											<div class="uiroamwrap">
 												<div class="uiroamhead">
@@ -156,6 +166,11 @@
 													<a class="morebtn icontrackmore"></a>
 													<a class="delebtn icontrackdelete"></a>
 												</div>
+												<div class="uitrackcontrol1">
+													<a class="favbtn1 icontrackfav1"></a>
+													<a class="morebtn1 icontrackmore1"></a>
+													<a class="delebtn1 icontrackdelete1"></a>
+												</div>
 											</div>
 											<div class="uiroamwrap">
 												<div class="uiroamhead">
@@ -186,6 +201,11 @@
 													<a class="favbtn icontrackfav"></a>
 													<a class="morebtn icontrackmore"></a>
 													<a class="delebtn icontrackdelete"></a>
+												</div>
+												<div class="uitrackcontrol1">
+													<a class="favbtn1 icontrackfav1"></a>
+													<a class="morebtn1 icontrackmore1"></a>
+													<a class="delebtn1 icontrackdelete1"></a>
 												</div>
 											</div>
 											<div class="uiroamwrap">
@@ -262,8 +282,8 @@
 				<div class="playerinfo">
 					<div class="trackinfo">
 						<div id="jtrackinfo" class="playertrackinfo">
-							<a href="#" id="jtrackname">Let It Go</a> - 
-							<a href="#">Demi Lovato</a>
+							<a href="#" id="jtrackname"></a> - 
+							<a href="#" id="jsingername"></a>
 						</div>
 						<div class="trackcontrols">
 							<a id="jtrackfav" class="iconfav"></a>
