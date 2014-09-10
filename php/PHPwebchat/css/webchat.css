@@ -1,0 +1,9 @@
+*{margin: 0;padding: 0;}
+
+#btn{width: 80px;height: 10px;line-height: 10px;padding: 10px 0 10px 0;margin: 100px auto;border: 1px solid #ccc;border-radius: 5px;text-align: center;cursor: pointer;}
+
+#add{width: 130px;height: 70px;margin: 60px auto;}
+.userinfo{width: 130px;height: 32px;}
+.username{width: 62px;border: 1px solid #ccc;float: left;height: 10px;line-height: 10px;padding: 10px 0 10px 0;text-align: center;}
+.userpwd{width: 62px;border: 1px solid #ccc;border-left: 0; float: left;height: 10px;line-height: 10px;padding: 10px 0 10px 0;text-align: center;}
+.addbtn{width: 60px;height: 10px;line-height: 10px;padding: 10px 0 10px 0;text-align: center;cursor: pointer;float: right;margin-top: 10px;border: 1px solid #ccc;border-radius: 5px;}
